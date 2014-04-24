@@ -3,10 +3,6 @@ body {
     -moz-animation: fadein 1s;
     animation: fadein 1s;
     background: #777;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
 }
 ol, ul {
     list-style: none;
@@ -227,7 +223,7 @@ header a:focus,
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 62.5rem){
+@media (max-width: 48rem){
     .site-container{
         margin: 0 auto;
         width: 85%;
@@ -237,8 +233,13 @@ header a:focus,
         margin: 0 auto;
     }
 }
-@media (min-width: 90.63rem){
+@media (min-width: 56.25rem){
     .modal-dialog{
-        width: 1060px;
+        width: 900px;
+    }
+}
+@media (min-width: 100rem){
+    .site-container{
+        width: 50%;
     }
 }
