@@ -31,17 +31,18 @@ define([
 			initialize: function(){
 				this.layout = new layoutView();
 				MyApp.mainRegion.show(this.layout);
-			},
-			main: function(){
 				this.layout.headerRegion.show(new headerView());
-				this.layout.mainContentRegion.show(new homeView());
 				this.layout.footerRegion.show(new footerView());
 			},
+			main: function(){
+				this.layout.mainContentRegion.show(new homeView());
+				
+			},
 			portfolio: function(){
-
+				this.layout.mainContentRegion.show(new homeView());
 			},
 			socialMedia: function(){
-
+				this.layout.mainContentRegion.show(new homeView());
 			}
 		});
 
