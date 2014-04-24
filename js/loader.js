@@ -36,7 +36,6 @@ define([
 			},
 			main: function(){
 				this.layout.mainContentRegion.show(new homeView());
-				
 			},
 			portfolio: function(){
 				this.layout.mainContentRegion.show(new homeView());
@@ -49,5 +48,7 @@ define([
 		var newController = new MyController();
 
 		newController.main();
+
+		return MyApp;
 	}
 )

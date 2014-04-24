@@ -4,7 +4,7 @@ define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/layout'
         var layout = Backbone.Marionette.Layout.extend({
             tagName: "section",
             className: "site-container",
-            template: '#layout',
+            template: _.template(template),
             regions: {
                 headerRegion: "header",
                 mainContentRegion: "#main-content",

@@ -2,7 +2,8 @@ define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/social-
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         var socialMediaView = Backbone.Marionette.ItemView.extend({
-            template : template,
+        	className: "social-media",
+            template : _.template(template),
         });
         return socialMediaView;
     }

@@ -2,7 +2,7 @@ define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/portfol
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         var portfolioView = Backbone.Marionette.ItemView.extend({
-            template : template,
+            template : _.template(template),
         });
         return portfolioView;
     }
