@@ -48,7 +48,5 @@ define([
 		var newController = new MyController();
 
 		newController.main();
-
-		return MyApp;
 	}
 )

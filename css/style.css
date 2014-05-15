@@ -2,7 +2,7 @@ body {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
     animation: fadein 1s;
-    background: #777;
+    background: #333;
 }
 ol, ul {
     list-style: none;
@@ -12,7 +12,7 @@ table {
     border-spacing: 0;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: #FFD66D;
+    color: orange;
     margin-bottom: 10px;
 }
 h1 {
@@ -58,7 +58,7 @@ p{
 }
 /* HEADER */
 header {
-    background: #777;
+    background: #333;
     height: 60px;
     padding: 5px 0;
     position: fixed;
@@ -70,7 +70,7 @@ header li {
     vertical-align: top;
 }
 header a {
-    background: #999;
+    background: #555;
     border-radius: 50%;
     color: #FFF;
     display: block;
@@ -93,8 +93,8 @@ header a {
 header a:hover,
 header a:focus,
 .selected{
-    color: #000;
-    background: #FFD66D;
+    color: #333;
+    background: orange;
     -moz-transition:
         background .2s .1s,
         color .2s .1s;
@@ -110,7 +110,7 @@ header a:focus,
 .rounded-img {
     width: 200px;
     border-radius: 50%;
-    background: #A5A5A5;/*#A6D7ED;*/
+    background: #555;/*#A5A5A5;*/
     padding: 7px;
     margin: 10px 0;
 }
@@ -120,7 +120,7 @@ header a:focus,
 
 /* PORTFOLIO - SECTION */
 .portfolio-section .frame {
-    background: #A5A5A5; /*#A6D7ED;*/
+    background: #555; /*#A5A5A5;*/
     margin: 10px 0;
     padding: 7px;
     -moz-transition:
@@ -134,7 +134,7 @@ header a:focus,
         color .2s .1s;
 }
 .portfolio-section .frame:hover {
-    background: #FFD66D;
+    background: orange;
     -moz-transition:
         background .2s .1s,
         color .2s .1s;
@@ -155,7 +155,7 @@ header a:focus,
 
 /* SOCIAL-MEDIA */
 .social-media a{
-    background: #A5A5A5; /*#A6D7ED;*/
+    background: #555; /*#A5A5A5;*/
     border-radius: 50%;
     display: block;
     margin: 10px auto;
@@ -173,7 +173,7 @@ header a:focus,
 }
 .social-media a:hover,
 .social-media a:focus{
-    background: #FFD66D;
+    background: orange;
     -moz-transition:
         background .2s .1s,
         color .2s .1s;
@@ -212,7 +212,7 @@ header a:focus,
 
 /* FOOTER */
 .copyright{
-    color: #A5A5A5;
+    color: #555;
 }
 
 /* MODAL */
