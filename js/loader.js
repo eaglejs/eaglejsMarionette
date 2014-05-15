@@ -5,26 +5,18 @@ define([
 	'HeaderView',
 	'HomeView',
 	'PortfolioView',
+	'ModalDialogsCollection',
 	'DialogView',
 	'SocialMediaView',
 	'FooterView'
 ], 
 
-	function(Backbone, Marionette, layoutView, headerView, homeView, portfolioView, dialogView, socialMediaView, footerView){
-	
+	function(Backbone, Marionette, layoutView, headerView, homeView, portfolioView, modalDialogsCollection, dialogView, socialMediaView, footerView){
+		'use strict'
 		var MyApp = new Backbone.Marionette.Application();
 
 		MyApp.addRegions({
 			mainRegion: "body"
-		});
-
-		var MyRouter = Backbone.Marionette.AppRouter.extend({
-			appRoutes: {
-				'': 'main',
-				'home': 'main',
-				'portfolio': 'portfolio',
-				'social-media': 'socialMedia'
-			}
 		});
 
 		var MyController = Backbone.Marionette.Controller.extend({
@@ -35,18 +27,28 @@ define([
 				this.layout.footerRegion.show(new footerView());
 			},
 			main: function(){
-				this.layout.mainContentRegion.show(new homeView());
+				this.layout.mainContentRegion.show(new homeView({
+					collection: modalDialogsCollection
+				}));
 			},
 			portfolio: function(){
-				this.layout.mainContentRegion.show(new homeView());
+				this.layout.mainContentRegion.show(new portfolioView({
+					collection: modalDialogsCollection
+				}));
 			},
 			socialMedia: function(){
-				this.layout.mainContentRegion.show(new homeView());
+				this.layout.mainContentRegion.show(new socialMediaView());
 			}
 		});
 
-		var newController = new MyController();
-
-		newController.main();
+		var MyRouter = new Backbone.Marionette.AppRouter.extend({
+			controller: new MyController(),
+			appRoutes: {
+				'': 'main',
+				'home': 'main',
+				'portfolio': 'portfolio',
+				'social-media': 'socialMedia'
+			}
+		});
 	}
 )

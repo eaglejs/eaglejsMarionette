@@ -11,14 +11,14 @@
         %>
 
             <div class="col-xs-3">
-                <a href="javascript:void(0);" data-id="<%= model.id %>">
+                <a href="javascript:void(0);" data-id="<%- model.id %>">
                     <div class="frame">
                         <div class="content">
-                            <img src="<%= model.smallImg %>" class="img-responsive" alt="<%= model.alt %>">
+                            <img src="<%- model.smallImg %>" class="img-responsive" alt="<%- model.alt %>">
                         </div>
                     </div>
                     <p class="text-center">
-                        <%= model.title %>
+                        <%- model.title %>
                     </p>
                 </a>
             </div>
