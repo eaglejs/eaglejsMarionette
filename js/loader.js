@@ -27,9 +27,7 @@ define([
 				this.layout.footerRegion.show(new footerView());
 			},
 			main: function(){
-				this.layout.mainContentRegion.show(new homeView({
-					collection: modalDialogsCollection
-				}));
+				this.layout.mainContentRegion.show(new homeView());
 			},
 			portfolio: function(){
 				this.layout.mainContentRegion.show(new portfolioView({
