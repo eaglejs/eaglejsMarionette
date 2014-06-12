@@ -1,4 +1,4 @@
-define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/layout' ],
+define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/layout.html' ],
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         var layout = Backbone.Marionette.Layout.extend({

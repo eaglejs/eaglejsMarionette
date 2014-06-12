@@ -1,4 +1,4 @@
-define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/header' ],
+define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/header.html' ],
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         var headerView = Backbone.Marionette.ItemView.extend({

@@ -1,4 +1,4 @@
-define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/dialog' ],
+define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/dialog.html' ],
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         var dialogView = Backbone.Marionette.ItemView.extend({
