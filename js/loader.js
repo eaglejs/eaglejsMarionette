@@ -27,9 +27,7 @@ define([
 				this.layout.footerRegion.show(new footerView());
 			},
 			main: function(){
-				this.layout.mainContentRegion.show(new homeView({
-					collection: modalDialogsCollection
-				}));
+				this.layout.mainContentRegion.show(new homeView());
 			},
 			portfolio: function(){
 				this.layout.mainContentRegion.show(new portfolioView({
@@ -39,9 +37,9 @@ define([
 			socialMedia: function(){
 				this.layout.mainContentRegion.show(new socialMediaView());
 			}
-		});
+		}),
 
-		var MyRouter = new Backbone.Marionette.AppRouter.extend({
+		MyRouter = new Backbone.Marionette.AppRouter.extend({
 			controller: new MyController(),
 			appRoutes: {
 				'': 'main',
@@ -50,5 +48,7 @@ define([
 				'social-media': 'socialMedia'
 			}
 		});
+
+		MyApp.start();
 	}
 )
