@@ -116,7 +116,20 @@ header a:focus,
 }
 
 /* HOME */
-
+.resume{
+    color: #FFF;
+}
+.resume:hover,
+.resume:focus{
+    color: #FFF;
+    text-decoration: none;
+}
+.resume:before{
+    color: orange;
+    content: "\f019";
+    font-family: "FontAwesome";
+    font-size: 4em;
+}
 
 /* PORTFOLIO - SECTION */
 .portfolio-section .frame {
@@ -223,9 +236,8 @@ header a:focus,
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 48rem){
+@media (max-width: 56.25rem){ /* 900px */
     .site-container{
-        margin: 0 auto;
         width: 85%;
     }
     .modal-dialog {
@@ -233,12 +245,12 @@ header a:focus,
         margin: 0 auto;
     }
 }
-@media (min-width: 56.25rem){
+@media (min-width: 56.25rem){ /* 900px */
     .modal-dialog{
         width: 900px;
     }
 }
-@media (min-width: 100rem){
+@media (min-width: 100rem){ /* 1600px */
     .site-container{
         width: 50%;
     }

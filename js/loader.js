@@ -27,6 +27,7 @@ define([
 				this.layout.footerRegion.show(new footerView());
 			},
 			main: function(){
+				console.log('main');
 				this.layout.mainContentRegion.show(new homeView());
 			},
 			portfolio: function(){
@@ -39,9 +40,9 @@ define([
 			}
 		}),
 
-		MyRouter = new Backbone.Marionette.AppRouter.extend({
+		MyRouter = new Marionette.AppRouter({
 			controller: new MyController(),
-			appRoutes: {
+			routes: {
 				'': 'main',
 				'home': 'main',
 				'portfolio': 'portfolio',
