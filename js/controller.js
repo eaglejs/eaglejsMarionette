@@ -13,6 +13,7 @@ define([
 
 	function(Backbone, Marionette, layoutView, headerView, homeView, portfolioView, modalDialogsCollection, dialogView, socialMediaView, footerView){
 		'use strict'
+		
 		var MyApp = new Backbone.Marionette.Application();
 
 		MyApp.addRegions({
@@ -38,18 +39,10 @@ define([
 			socialMedia: function(){
 				this.layout.mainContentRegion.show(new socialMediaView());
 			}
-		}),
-
-		MyRouter = new Marionette.AppRouter({
-			controller: new MyController(),
-			routes: {
-				'': 'main',
-				'home': 'main',
-				'portfolio': 'portfolio',
-				'social-media': 'socialMedia'
-			}
 		});
 
 		MyApp.start();
+
+		return MyController;
 	}
-)
+);

@@ -11,19 +11,22 @@ require.config({
         Underscore: "libs/underscore-min1.5.2",
 
         // Models
-        'DialogModel': "models/dialog-model",
+        DialogModel: "models/dialog-model",
 
         // Collections
-        'ModalDialogsCollection': "collections/modal-dialogs-collection",
+        ModalDialogsCollection: "collections/modal-dialogs-collection",
 
         // Views
-        'DialogView': "views/dialog-view",
-        'FooterView': "views/footer-view",
-        'HeaderView': "views/header-view",
-        'HomeView': "views/home-view",
-        'LayoutView': "views/layout",
-        'PortfolioView': "views/portfolio-view",
-        'SocialMediaView': "views/social-media-view",
+        DialogView: "views/dialog-view",
+        FooterView: "views/footer-view",
+        HeaderView: "views/header-view",
+        HomeView: "views/home-view",
+        LayoutView: "views/layout",
+        PortfolioView: "views/portfolio-view",
+        SocialMediaView: "views/social-media-view",
+
+        // Controllers
+        Controller: "controller",
 
         // This will let me include html templates
         'Text': "text"
@@ -49,5 +52,5 @@ require.config({
         }
     }
 });
-// this calls the loader.js
-require(['loader']);
+// this calls the router.js
+require(['router']);
