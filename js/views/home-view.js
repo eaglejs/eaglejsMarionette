@@ -1,4 +1,4 @@
-define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/home.html' ],
+define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'text!../html/home.html' ],
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         var homeView = Backbone.Marionette.ItemView.extend({

@@ -36,7 +36,7 @@ define(["Marionette"], function(Marionette){
 
 	SurakusaApp.on("initialize:after", function(){
 		if(Backbone.history){
-			require
+			console.log('hi');
 		}
 	});
 

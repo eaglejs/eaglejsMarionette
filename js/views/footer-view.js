@@ -1,4 +1,4 @@
-define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/footer.html' ],
+define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'text!../html/footer.html' ],
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         var footerView = Backbone.Marionette.ItemView.extend({

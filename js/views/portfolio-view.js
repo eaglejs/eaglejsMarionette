@@ -1,4 +1,4 @@
-define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/portfolio.html' ],
+define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'text!../html/portfolio.html' ],
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         var portfolioView = Backbone.Marionette.ItemView.extend({

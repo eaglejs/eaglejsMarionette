@@ -1,14 +1,11 @@
 require.config({
-
-    // Paths assumes the js suffix
     paths: {
-
         // Libraries
-        Backbone: "libs/backbone1.1",
+        Backbone: "libs/backbone",
         Bootstrap: "libs/bootstrap",
-        jQuery: "libs/jquery-1.10.2.min",
-        Marionette: "libs/marionette1.8.2",
-        Underscore: "libs/underscore-min1.5.2",
+        jQuery: "libs/jquery",
+        Marionette: "libs/marionette",
+        Underscore: "libs/underscore",
 
         // Models
         DialogModel: "models/dialog-model",
@@ -26,31 +23,33 @@ require.config({
         SocialMediaView: "views/social-media-view",
 
         // Controllers
-        Controller: "controller",
+        MyController: "controller",
 
         // This will let me include html templates
-        'Text': "text"
+        'text': "text"
     },
     waitSeconds: 30,
     shim: {
-        'Backbone': {
-            deps: ['Underscore', 'jQuery', 'Bootstrap'],
-            exports: 'Backbone'
-        },
-        'Bootstrap': {
-            deps: ['jQuery']
-        },
-        'jQuery':{
+        jQuery:{
             exports: '$'
         },
-        'Marionette': {
-            deps: ['Backbone', 'jQuery', 'Underscore'],
-            exports: "Marionette"
-        },
-        'Underscore': {
+        Underscore: {
             exports: '_'
+        },
+        Bootstrap: {
+            deps: ['jQuery']
+        },
+        Backbone: {
+            deps: ['jQuery', 'Underscore', 'Bootstrap'],
+            exports: 'Backbone'
+        },
+        Marionette: {
+            deps: ['jQuery', 'Underscore', 'Backbone'],
+            exports: "Marionette"
         }
     }
 });
-// this calls the router.js
-require(['router']);
+// this calls the app.js
+require(['app'], function(SurakusaApp){
+    SurakusaApp.start();
+});
