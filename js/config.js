@@ -1,11 +1,11 @@
 require.config({
     paths: {
         // Libraries
-        Backbone: "libs/backbone",
-        Bootstrap: "libs/bootstrap",
-        jQuery: "libs/jquery",
-        Marionette: "libs/marionette",
-        Underscore: "libs/underscore",
+        backbone: "libs/backbone",
+        bootstrap: "libs/bootstrap",
+        jquery: "libs/jquery",
+        marionette: "libs/marionette",
+        underscore: "libs/underscore",
 
         // Models
         DialogModel: "models/dialog-model",
@@ -30,26 +30,24 @@ require.config({
     },
     waitSeconds: 30,
     shim: {
-        jQuery:{
+        jquery:{
             exports: '$'
         },
-        Underscore: {
+        underscore: {
             exports: '_'
         },
-        Bootstrap: {
-            deps: ['jQuery']
+        bootstrap: {
+            deps: ['jquery']
         },
-        Backbone: {
-            deps: ['jQuery', 'Underscore', 'Bootstrap'],
-            exports: 'Backbone'
+        backbone: {
+            deps: ['jquery', 'underscore', 'bootstrap'],
+            exports: 'backbone'
         },
         Marionette: {
-            deps: ['jQuery', 'Underscore', 'Backbone'],
+            deps: ['backbone'],
             exports: "Marionette"
         }
     }
 });
-// this calls the app.js
-require(['app'], function(SurakusaApp){
-    SurakusaApp.start();
-});
+// this calls the router.js
+require(['router']);

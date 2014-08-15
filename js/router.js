@@ -1,45 +1,28 @@
-define(["Marionette"], function(Marionette){
-	'use strict'
+define([
+	'backbone',
+	'marionette',
+	'MyController'
+], 
 
-	var SurakusaApp = new Marionette.Application();
+	function(Backbone, Marionette, MyController){
+		'use strict'
 
-	SurakusaApp.addRegions({
-		headerRegion: "header",
-		mainContentRegion: "#main-content",
-		footerRegion: "footer"
-	});
+		var MyApp = new Backbone.Marionette.Application();
 
-	SurakusaApp.navigate = function(route, options){
-		options || (options = {});
-		Backbone.History.navigate(route, options);
+		MyApp.addRegions({
+			mainRegion: "body"
+		});
+
+		MyRouter = new Backbone.Marionette.AppRouter.extend({
+			controller: new MyController(),
+			appRoutes: {
+				'': 'main',
+				'home': 'main',
+				'portfolio': 'portfolio',
+				'social-media': 'socialMedia'
+			}
+		});
+
+		MyApp.start();
 	}
-
-	SurakusaApp.getCurrentRoute = function(){
-		return Backbone.history.fragment
-	}
-
-	SurakusaApp.startSubApp = function(appName, args){
-		var currentApp = appName ? SurakusaApp.module(appName) : null;
-
-		if (SurakusaApp.currentApp === currentApp){ return;}
-
-		if (SurakusaApp.currentApp){
-			SurakusaApp.currentApp.stop();
-		}
-
-		SurakusaApp.currentApp = currentApp;
-
-		if(currentApp){
-			currentApp.start(args);
-		}
-	}
-
-	SurakusaApp.on("initialize:after", function(){
-		if(Backbone.history){
-			require
-		}
-	});
-
-	return SurakusaApp;
-
-});
+)
