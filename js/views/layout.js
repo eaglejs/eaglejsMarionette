@@ -1,7 +1,7 @@
-define([ 'Backbone', 'Marionette', 'jQuery', 'Underscore', 'Text!../html/layout.html' ],
+define([ 'backbone', 'marionette', 'jquery', 'underscore', 'text!../html/layout.html' ],
     function (Backbone, Marionette, $, _, template) {
         'use strict';
-        var layout = Backbone.Marionette.Layout.extend({
+        var layout = Backbone.Marionette.LayoutView.extend({
             tagName: "section",
             className: "site-container",
             template: _.template(template),

@@ -1,45 +1,45 @@
-define(["Marionette"], function(Marionette){
-	'use strict'
+define([
+	'backbone',
+	'marionette',
+	'LayoutView',
+	'HeaderView',
+	'FooterView',
+	'HomeView',
+	'PortfolioView',
+	'SocialMediaView',
+	'vent'
+], 
 
-	var SurakusaApp = new Marionette.Application();
+	function(Backbone, Marionette, layoutView, headerView, footerView, homeView, portfolioView, socialMediaView, vent){
+		'use strict'
 
-	SurakusaApp.addRegions({
-		headerRegion: "header",
-		mainContentRegion: "#main-content",
-		footerRegion: "footer"
-	});
+		var app = new Backbone.Marionette.Application();
 
-	SurakusaApp.navigate = function(route, options){
-		options || (options = {});
-		Backbone.History.navigate(route, options);
+		app.addRegions({
+			mainRegion: "body"
+		});
+
+		app.addInitializer(function(){
+			app.layout = new layoutView();
+			app.mainRegion.show(app.layout);
+			app.layout.headerRegion.show(new headerView());
+			app.layout.footerRegion.show(new footerView());
+		});
+
+		vent.on('home', function(){
+			app.layout.mainContentRegion.show(new homeView());
+		});
+
+		vent.on('portfolio', function(){
+			app.layout.mainContentRegion.show(new portfolioView({
+				collection: modalDialogsCollection
+			}));
+		});
+
+		vent.on('socialMedia', function(){
+			app.layout.mainContentRegion.show(new socialMediaView());
+		});
+
+		return app;
 	}
-
-	SurakusaApp.getCurrentRoute = function(){
-		return Backbone.history.fragment
-	}
-
-	SurakusaApp.startSubApp = function(appName, args){
-		var currentApp = appName ? SurakusaApp.module(appName) : null;
-
-		if (SurakusaApp.currentApp === currentApp){ return;}
-
-		if (SurakusaApp.currentApp){
-			SurakusaApp.currentApp.stop();
-		}
-
-		SurakusaApp.currentApp = currentApp;
-
-		if(currentApp){
-			currentApp.start(args);
-		}
-	}
-
-	SurakusaApp.on("initialize:after", function(){
-		if(Backbone.history){
-			console.log('hi');
-		}
-	});
-
-	return SurakusaApp;
-
-});
+);

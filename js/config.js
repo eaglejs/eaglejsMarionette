@@ -1,11 +1,14 @@
 require.config({
     paths: {
+        app: "app",
+
         // Libraries
         backbone: "libs/backbone",
         bootstrap: "libs/bootstrap",
         jquery: "libs/jquery",
         marionette: "libs/marionette",
         underscore: "libs/underscore",
+        vent: "libs/vent",
 
         // Models
         DialogModel: "models/dialog-model",
@@ -23,10 +26,13 @@ require.config({
         SocialMediaView: "views/social-media-view",
 
         // Controllers
-        MyController: "controller",
+        controller: "controller",
+
+        // router
+        router: "router",
 
         // This will let me include html templates
-        'text': "text"
+        text: "text"
     },
     waitSeconds: 30,
     shim: {
@@ -41,13 +47,19 @@ require.config({
         },
         backbone: {
             deps: ['jquery', 'underscore', 'bootstrap'],
-            exports: 'backbone'
+            exports: 'Backbone'
         },
-        Marionette: {
+        marionette: {
             deps: ['backbone'],
-            exports: "Marionette"
+            exports: 'Marionette'
         }
     }
 });
-// this calls the router.js
-require(['router']);
+define(['app', 'controller', 'router'], function(app, controller, router){
+
+    new router({
+        controller: new controller()
+    });
+    app.start();
+    Backbone.history.start();
+});

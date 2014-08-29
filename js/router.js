@@ -1,28 +1,19 @@
 define([
 	'backbone',
-	'marionette',
-	'MyController'
+	'marionette'
 ], 
 
-	function(Backbone, Marionette, MyController){
+	function(Backbone, Marionette){
 		'use strict'
 
-		var MyApp = new Backbone.Marionette.Application();
-
-		MyApp.addRegions({
-			mainRegion: "body"
-		});
-
-		MyRouter = new Backbone.Marionette.AppRouter.extend({
-			controller: new MyController(),
+		var MyRouter = Backbone.Marionette.AppRouter.extend({
 			appRoutes: {
-				'': 'main',
-				'home': 'main',
+				'': 'home',
+				'home': 'home',
 				'portfolio': 'portfolio',
 				'social-media': 'socialMedia'
 			}
 		});
-
-		MyApp.start();
+		return MyRouter;
 	}
 )

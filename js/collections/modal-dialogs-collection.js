@@ -1,5 +1,5 @@
 define([
-    "Backbone",
+    "backbone",
     "DialogModel"
 ],
     function (Backbone, DialogModel) {

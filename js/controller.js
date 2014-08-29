@@ -1,37 +1,24 @@
 define([
 	'backbone',
 	'marionette',
-	'LayoutView',
-	'HeaderView',
-	'HomeView',
-	'PortfolioView',
-	'ModalDialogsCollection',
-	'DialogView',
-	'SocialMediaView',
-	'FooterView'
+	'vent'
 ], 
 
-	function(Backbone, Marionette, layoutView, headerView, homeView, portfolioView, modalDialogsCollection, dialogView, socialMediaView, footerView){
+	function(Backbone, Marionette, vent){
 		'use strict'
 
 		var MyController = Backbone.Marionette.Controller.extend({
-			initialize: function(){
-				this.layout = new layoutView();
-				MyApp.mainRegion.show(this.layout);
-				this.layout.headerRegion.show(new headerView());
-				this.layout.footerRegion.show(new footerView());
-			},
-			main: function(){
-				this.layout.mainContentRegion.show(new homeView());
+			home: function(){
+				vent.trigger('home');
 			},
 			portfolio: function(){
-				this.layout.mainContentRegion.show(new portfolioView({
-					collection: modalDialogsCollection
-				}));
+				vent.trigger('portfolio');
 			},
 			socialMedia: function(){
-				this.layout.mainContentRegion.show(new socialMediaView());
+				vent.trigger('socialMedia');
 			}
 		});
+
+		return MyController;
 	}
 )
