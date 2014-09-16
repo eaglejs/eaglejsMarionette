@@ -6,11 +6,12 @@ define([
 	'FooterView',
 	'HomeView',
 	'PortfolioView',
+	'ModalDialogsCollection',
 	'SocialMediaView',
 	'vent'
 ], 
 
-	function(Backbone, Marionette, layoutView, headerView, footerView, homeView, portfolioView, socialMediaView, vent){
+	function(Backbone, Marionette, layoutView, headerView, footerView, homeView, portfolioView, modalDialogsCollection, socialMediaView, vent){
 		'use strict'
 
 		var app = new Backbone.Marionette.Application();
@@ -31,9 +32,7 @@ define([
 		});
 
 		vent.on('portfolio', function(){
-			app.layout.mainContentRegion.show(new portfolioView({
-				collection: modalDialogsCollection
-			}));
+			app.layout.mainContentRegion.show(new portfolioView());
 		});
 
 		vent.on('socialMedia', function(){

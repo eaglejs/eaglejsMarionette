@@ -11,24 +11,22 @@ require.config({
         vent: "libs/vent",
 
         // Models
-        DialogModel: "models/dialog-model",
+        DialogModel: "models/dialogModel",
 
         // Collections
-        ModalDialogsCollection: "collections/modal-dialogs-collection",
+        ModalDialogsCollection: "collections/modalDialogsCollection",
 
         // Views
-        DialogView: "views/dialog-view",
-        FooterView: "views/footer-view",
-        HeaderView: "views/header-view",
-        HomeView: "views/home-view",
+        DialogView: "views/dialogView",
+        FooterView: "views/footerView",
+        HeaderView: "views/headerView",
+        HomeView: "views/homeView",
         LayoutView: "views/layout",
-        PortfolioView: "views/portfolio-view",
-        SocialMediaView: "views/social-media-view",
+        PortfolioView: "views/portfolioView",
+        SocialMediaView: "views/socialMediaView",
 
-        // Controllers
         controller: "controller",
 
-        // router
         router: "router",
 
         // This will let me include html templates
@@ -51,12 +49,11 @@ require.config({
         },
         marionette: {
             deps: ['backbone'],
-            exports: 'Marionette'
+            exports: 'marionette'
         }
     }
 });
 define(['app', 'controller', 'router'], function(app, controller, router){
-
     new router({
         controller: new controller()
     });
