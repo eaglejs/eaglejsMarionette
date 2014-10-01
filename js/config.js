@@ -25,6 +25,9 @@ require.config({
         PortfolioView: "views/portfolioView",
         SocialMediaView: "views/socialMediaView",
 
+        // Composite Views
+        PortfolioCompositeView: "views/portfolioCompositeView",
+
         controller: "controller",
 
         router: "router",

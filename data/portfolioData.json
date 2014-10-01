@@ -1,0 +1,58 @@
+{
+    "portfolioList":[
+        {
+            "title": "Dept. Veterans Affairs",
+            "img": "img/portfolio-images/scv3.png",
+            "smallImg": "img/portfolio-images/scv3-small.png",
+            "about": "This is one of a few applications/applets I helped to create and this is my latest work. The Scheduling Calendar View allows a VA Clerk to schedule appointments for Military Veterans as well as search for patients, patient information, schedules, messaging, and viewing pending requests. This application interacts with an old (dos-like) system that the VA still uses today.",
+            "used": "Tools: Node, Marionette, Angular, Backbone, Handlebars, Underscore, Require, Modernizr, JQM, Twitter Bootstrap, Grunt.",
+            "alt": "va.gov",
+            "url": "http://www.va.gov"
+        },
+        {
+            "title": "Healthcare",
+            "img": "img/portfolio-images/healthcare.png",
+            "smallImg": "img/portfolio-images/healthcare-small.png",
+            "about": "Responsibilities include working in a fast-pace, agile environment, creating responsive web pages for all three sections of the Federally-Facilitated Marketplace. My work has been presented at the White House for the new health care law that was passed under President Barack Hussein Obama.",
+            "used": "Tools: HTML5, CSS3, Twitter Bootstrap, dataTables.js, Javascript/jQuery",
+            "alt": "healthcare.gov",
+            "url": "http://www.healthcare.gov"
+        },
+        {
+            "title": "Medicare",
+            "img": "img/portfolio-images/medicare.png",
+            "smallImg": "img/portfolio-images/medicare-small.png",
+            "about": "Responsibilities include working in a fast-pace, agile environment, using asp.net to create HTML5/CSS3 pages.",
+            "used": "Tools: HTML5, CSS3, Javascript/jQuery, asp.net",
+            "alt": "Medicare.gov",
+            "url": "http://www.medicare.gov"
+        },
+        {
+            "title": "Lucinda Team",
+            "img": "img/portfolio-images/lucindateam.png",
+            "smallImg": "img/portfolio-images/lucindateam-small.png",
+            "about": "Competing against 2 other companies, I was awarded the contract to develop a responsive website from Wordpress that the client could ultimately maintain. The goal was to create a responsive website that will work on mobile devices, that has SEO optimization.",
+            "used": "Tools: Google Analytics, Search Engine Optimization, HTML5, CSS3, javascript/jQuery, Wordpress, PHP, MySQL",
+            "alt": "lucindateam.com",
+            "url": "http://www.lucindateam.com"
+        },
+        {
+            "title": "Eurasia Foundation",
+            "img": "img/portfolio-images/ebl.png",
+            "smallImg": "img/portfolio-images/ebl-small.png",
+            "about": "While working with DRT Inc., A colleague and I submited a bid for a contract to create a website that will inform those in Central Asia of their rights, as well as how to seek help in the event they have been wrongfully accused. This is a relatively small website that took about six weeks to complete, and used a search module that required back-end resources to search pdf documents and then result those reults on the site.",
+            "used": "Tools: HTML4, CSS2, PHP, MySQL, AWS EC2 Servers, javascript/jQuery",
+            "alt": "equalbeforethelaw.org",
+            "url": "http://www.equalbeforethelaw.org"
+        },
+        {
+            "title": "SBA",
+            "img": "img/portfolio-images/sba.png",
+            "smallImg": "img/portfolio-images/sba-small.png",
+            "about": "Working with the Small Business Administration, I was able to create a large website that the client would ultimately maintain themselves using Drupal as our CMS. This site has two main structures… The main informational website, and the community forums. My responsibilities include creating HTML, CSS , maintaining the databases as well as the Amazon Web Services, generating builds and updating the Small Business Administrations main website.",
+            "used": "Tools: HTML4, CSS2, PHP, MySQL, AWS EC2 Servers, IIS, javascript/jQuery",
+            "alt": "sba.gov",
+            "url": "http://www.sba.gov"
+        }
+    ]
+}
