@@ -2,11 +2,11 @@ define([
     "backbone",
     "DialogModel"
 ],
-    function (Backbone, DialogModel) {
+    function (Backbone, dialogModel) {
         'use strict';
 
         return Backbone.Collection.extend({
-            model: DialogModel,
+            model: dialogModel,
             url: "data/portfolioData.json",
             parse: function(response){
                 return response.portfolioList;

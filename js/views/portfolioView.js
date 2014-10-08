@@ -1,5 +1,5 @@
-define([ 'backbone', 'marionette', 'jquery', 'underscore', 'text!../html/portfolioLayout.html' ],
-    function (Backbone, Marionette, $, _, template) {
+define([ 'backbone', 'marionette', 'jquery', 'underscore', 'text!../html/portfolioItem.html' ],
+    function (Backbone, Marionette, $, _,template) {
         'use strict';
         return Backbone.Marionette.ItemView.extend({
         	className: 'col-xs-3',
