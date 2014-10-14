@@ -78,15 +78,6 @@ header a {
     padding-top: 10px;
     text-align: center;
     top: 0;
-    -moz-transition:
-        background .2s .1s,
-        color .2s .1s;
-    -webkit-transition:
-        background .2s .1s,
-        color .2s .1s;
-    transition:
-        background .2s .1s,
-        color .2s .1s;
     width: 50px;
     height: 50px;
 }
@@ -132,61 +123,72 @@ header a:focus,
 }
 
 /* PORTFOLIO - SECTION */
-.portfolio-section .frame {
-    background: #555; /*#A5A5A5;*/
-    margin: 10px 0;
-    padding: 7px;
-    -moz-transition:
-        background .2s .1s,
-        color .2s .1s;
-    -webkit-transition:
-        background .2s .1s,
-        color .2s .1s;
-    transition:
-        background .2s .1s,
-        color .2s .1s;
+.portfolio-section a {
+    background: #555;
+    text-decoration: none;
 }
-.portfolio-section .frame:hover {
+.portfolio-section a:hover,
+.portfolio-section a:focus{
     background: orange;
     -moz-transition:
-        background .2s .1s,
-        color .2s .1s;
+        background .2s .1s;
     -webkit-transition:
-        background .2s .1s,
-        color .2s .1s;
+        background .2s .1s;
     transition:
-        background .2s .1s,
-        color .2s .1s;
+        background .2s .1s;
+}
+.portfolio-section a:after{
+    content: '';
+    -moz-transition:
+        background .2s .1s;
+    -webkit-transition:
+        background .2s .1s;
+    transition:
+        background .2s .1s;
+}
+.portfolio-section a:hover:after,
+.portfolio-section a:focus:after {
+    background: orange;
+    bottom: 41px;
+    content: '';
+    height: 10px;
+    position: absolute;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    width: 10px;
+}
+.portfolio-section .frame {
+    background: inherit; /*#A5A5A5;*/
+    margin: 10px 0;
+    padding: 7px;
+    
+}
+.portfolio-section .frame:hover {
+    background: inherit;
 }
 .portfolio-section .frame .content{
     overflow: hidden;
     max-height: 200px;
 }
-.portfolio-section a {
-    text-decoration: none;
-}
 
 /* SOCIAL-MEDIA */
+.social-media-items{
+    vertical-align: top;
+}
 .social-media a{
     background: #555; /*#A5A5A5;*/
     border-radius: 50%;
+    color: #FFF;
     display: block;
     margin: 10px auto;
     padding: 25px;
     width: 150px;
-    -moz-transition:
-        background .2s .1s,
-        color .2s .1s;
-    -webkit-transition:
-        background .2s .1s,
-        color .2s .1s;
-    transition:
-        background .2s .1s,
-        color .2s .1s;
 }
 .social-media a:hover,
 .social-media a:focus{
     background: orange;
+    color: #333;
     -moz-transition:
         background .2s .1s,
         color .2s .1s;
@@ -197,8 +199,12 @@ header a:focus,
         background .2s .1s,
         color .2s .1s;
 }
+.font-icons{
+    font-size: 7em;
+    color: inherit;
+}
 /* CSS that spans across multiple pages */
-.home, .portfolio, .social-media {
+.home, .portfolio, .social-media, .font-icons {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
     animation: fadein 1s;
@@ -236,22 +242,18 @@ header a:focus,
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 56.25rem){ /* 900px */
-    .site-container{
-        width: 85%;
-    }
-    .modal-dialog {
-        width: 98%;
-        margin: 0 auto;
-    }
-}
 @media (min-width: 56.25rem){ /* 900px */
     .modal-dialog{
         width: 900px;
     }
 }
+@media (max-width: 64rem){ /* 1024px */
+    .site-container{
+        width: 85%;
+    }
+}
 @media (min-width: 100rem){ /* 1600px */
     .site-container{
-        width: 50%;
+        width: 70%;
     }
 }
