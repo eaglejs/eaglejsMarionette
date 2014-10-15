@@ -8,6 +8,7 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'text!../html/layout.
             regions: {
                 headerRegion: "header",
                 mainContentRegion: "#main-content",
+                portfolioDialog: ".portfolio-dialog",
                 footerRegion: "footer"
             }
         });

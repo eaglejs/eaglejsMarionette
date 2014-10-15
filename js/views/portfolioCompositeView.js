@@ -5,7 +5,14 @@ define(
 		return Backbone.Marionette.CompositeView.extend({
 			template: _.template(template),
 			childViewContainer: '.row',
-			childView: portfolioView
+			childView: portfolioView,
+			initialize: function(){
+				portfolioView.collection = this.collection;
+			},
+            onShow: function(){
+            	$('.nav-menu').removeClass('selected');
+            	$('.nav-menu:eq(1)').addClass('selected');
+            }
 		});
 	}
 );

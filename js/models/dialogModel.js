@@ -10,20 +10,7 @@ define([
                 'used': '',
                 'alt': '',
                 'smallImg': ''
-            },
-
-            parse: function(response){
-
-                response.id = this.assignUniqueID();
-
-                return response;
-
-            },
-
-            assignUniqueID: function() {
-                return Math.random();
             }
-
         });
 
         return modalDialog;

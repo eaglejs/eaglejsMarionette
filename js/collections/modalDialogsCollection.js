@@ -1,6 +1,7 @@
 define([
     "backbone",
-    "DialogModel"
+    "DialogModel",
+    "ModalDialogsCollection"
 ],
     function (Backbone, dialogModel) {
         'use strict';
@@ -13,13 +14,10 @@ define([
             },
             initialize: function(){
                 this.fetch({async: false});
-
             },
             findById: function(id){
                 return this.find(function(model){
-
                     return model.id === id;
-
                 });
 
             }

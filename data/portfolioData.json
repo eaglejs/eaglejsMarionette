@@ -40,7 +40,7 @@
             "title": "Eurasia Foundation",
             "img": "img/portfolio-images/ebl.png",
             "smallImg": "img/portfolio-images/ebl-small.png",
-            "about": "While working with DRT Inc., A colleague and I submited a bid for a contract to create a website that will inform those in Central Asia of their rights, as well as how to seek help in the event they have been wrongfully accused. This is a relatively small website that took about six weeks to complete, and used a search module that required back-end resources to search pdf documents and then result those reults on the site.",
+            "about": "While working with DRT Inc., A colleague and I submited a bid for a contract to create a website that will inform those in Central Asia of their rights, as well as how to seek help in the event they have been wrongfully accused. This is a relatively small website that took about six weeks to complete, and used a search module that required back-end resources to search pdf documents and then return those reults on the site.",
             "used": "Tools: HTML4, CSS2, PHP, MySQL, AWS EC2 Servers, javascript/jQuery",
             "alt": "equalbeforethelaw.org",
             "url": "http://www.equalbeforethelaw.org"
