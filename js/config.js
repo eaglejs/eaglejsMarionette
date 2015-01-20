@@ -37,22 +37,13 @@ require.config({
     },
     waitSeconds: 30,
     shim: {
-        jquery:{
-            exports: '$'
-        },
-        underscore: {
-            exports: '_'
-        },
         bootstrap: {
-            deps: ['jquery']
+            deps: ['jquery'],
+            exports: 'jquery'
         },
         backbone: {
             deps: ['jquery', 'underscore', 'bootstrap'],
-            exports: 'Backbone'
-        },
-        marionette: {
-            deps: ['backbone'],
-            exports: 'marionette'
+            exports: 'backbone'
         }
     }
 });
