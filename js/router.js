@@ -9,9 +9,9 @@ define([
 		var MyRouter = Backbone.Marionette.AppRouter.extend({
 			appRoutes: {
 				'': 'home',
-				'home': 'home',
 				'portfolio': 'portfolio',
-				'social-media': 'socialMedia'
+				'social-media': 'socialMedia',
+				'*actions': 'home'
 			}
 		});
 		return MyRouter;
