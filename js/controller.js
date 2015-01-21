@@ -7,7 +7,7 @@ define([
 	function(Backbone, Marionette, vent){
 		'use strict'
 
-		var MyController = Backbone.Marionette.Controller.extend({
+		return Backbone.Marionette.Controller.extend({
 			home: function(){
 				vent.trigger('home');
 			},
@@ -18,7 +18,5 @@ define([
 				vent.trigger('socialMedia');
 			}
 		});
-
-		return MyController;
 	}
 )

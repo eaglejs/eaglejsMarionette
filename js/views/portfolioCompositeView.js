@@ -8,11 +8,7 @@ define(
 			childView: portfolioView,
 			initialize: function(){
 				portfolioView.collection = this.collection;
-			},
-            onShow: function(){
-            	$('.nav-menu').removeClass('selected');
-            	$('.nav-menu:eq(1)').addClass('selected');
-            }
+			}
 		});
 	}
 );

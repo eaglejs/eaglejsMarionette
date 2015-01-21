@@ -22,6 +22,7 @@ require.config({
         HeaderView: "views/headerView",
         HomeView: "views/homeView",
         LayoutView: "views/layout",
+        NavMenuView: "views/navMenuView",
         PortfolioView: "views/portfolioView",
         SocialMediaView: "views/socialMediaView",
 
