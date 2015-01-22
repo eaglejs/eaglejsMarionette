@@ -66,15 +66,13 @@ p{
 header {
     background: #333;
     height: 60px;
-    padding: 5px 0;
     position: fixed;
-    width: inherit;
+    width: 100%;
     z-index: 10;
 }
 header button {
-    background: #555;
+    background: #333;
     border: none;
-    border-radius: 50%;
     color: #FFF;
     display: block;
     font-size: 2.2rem;
@@ -85,8 +83,7 @@ header button {
     height: 50px;
 }
 header button:hover,
-header button:focus,
-.selected{
+header button:focus{
     color: #333;
     background: orange;
     -moz-transition:
@@ -106,31 +103,50 @@ header button:focus,
     display: inline-block;
     position: fixed;
     top: 0;
+    width: 0;
+    opacity: 0;
+    -moz-transition: width .5s,
+        opacity .5s;
+    -webkit-transition: width .5s,
+        opacity .5s;
+    transition: width: .5s,
+        opacity .5s;
 }
 .nav-container.menu-open{
     width: 25%;
+    opacity: 1;
 }
 .nav-container ul{
-    padding: 0 10px;
-    width: 100%;
+    padding: 0;
     margin: 0;
 }
 .nav-container li{
-    margin: 10px 0;
+    margin: 0;
 }
 .nav-container a:before{
     margin-right: 10px;
 }
 .nav-container a{
-    color: orange;
+    color: #FFF;
     font-size: 1.5em;
+    padding: 20px 5px;
+    width: 100%;
 }
-
+.nav-container a:hover{
+    background: #333;
+    color: orange;
+    text-decoration: none;
+}
+.site-section{
+    left: 0;
+    -moz-transition: left .5s;
+    -webkit-transition: left .5s;
+    transition: left .5s;
+}
 .site-section.menu-open{
-    display: inline-block;
     position: absolute;
     right: 0;
-    width:75%;
+    left: 25%;
 }
 
 /* MISC */
@@ -278,6 +294,14 @@ header button:focus,
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 40.94rem){
+    .nav-container.menu-open{
+        width: 35%;
+    }
+    .site-section.menu-open{
+        left: 35%;
+    }
+}
 @media (min-width: 56.25rem){ /* 900px */
     .modal-dialog{
         width: 900px;

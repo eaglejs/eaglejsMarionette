@@ -4,7 +4,8 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'vent', 'text!../html
         return Backbone.Marionette.ItemView.extend({
             template : _.template(template),
             events: {
-            	'click button': 'showNavMenu'
+            	'click #menu': 'showNavMenu',
+                'click .site-container:not(#menu)': 'showNavMenu'
             },
             showNavMenu: function(){
                 var elements = {
