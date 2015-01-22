@@ -2,7 +2,8 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'text!../html/home.ht
     function (Backbone, Marionette, $, _, template) {
         'use strict';
         return Backbone.Marionette.ItemView.extend({
-            template : _.template(template)
+            template : _.template(template),
+            className: 'home'
         });
     }
 );

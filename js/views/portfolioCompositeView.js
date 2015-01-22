@@ -4,6 +4,7 @@ define(
 		'use strict';
 		return Backbone.Marionette.CompositeView.extend({
 			template: _.template(template),
+			className: 'portfolio',
 			childViewContainer: '.row',
 			childView: portfolioView,
 			initialize: function(){
