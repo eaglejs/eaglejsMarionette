@@ -105,6 +105,7 @@ header button:focus{
     top: 0;
     width: 0;
     opacity: 0;
+    overflow: hidden;
     -moz-transition: width .5s,
         opacity .5s;
     -webkit-transition: width .5s,
@@ -294,7 +295,16 @@ header button:focus{
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 40.94rem){
+@media (max-width: 22.56rem){ /* 361px */
+    .nav-container.menu-open{
+        width: 50%;
+    }
+    .site-section.menu-open{
+        left: 50%;
+    }
+}
+/* No greater than 655px, no less than 361px */
+@media (max-width: 40.94rem) and (min-width: 22.63rem){ 
     .nav-container.menu-open{
         width: 35%;
     }
