@@ -130,7 +130,7 @@ header button:focus{
 .nav-container a{
     color: #FFF;
     font-size: 1.5em;
-    padding: 20px 5px;
+    padding: 15px 5px;
     width: 100%;
 }
 .nav-container a:hover{
@@ -295,7 +295,7 @@ header button:focus{
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 22.56rem){ /* 361px */
+@media (max-width: 30.69rem){ /* 491px */
     .nav-container.menu-open{
         width: 50%;
     }
@@ -303,8 +303,8 @@ header button:focus{
         left: 50%;
     }
 }
-/* No greater than 655px, no less than 361px */
-@media (max-width: 40.94rem) and (min-width: 22.63rem){ 
+/* No greater than 687px, no less than 492px */
+@media (max-width: 42.94rem) and (min-width: 30.75rem){ 
     .nav-container.menu-open{
         width: 35%;
     }
