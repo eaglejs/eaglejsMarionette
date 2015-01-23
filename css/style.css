@@ -99,10 +99,9 @@ header button:focus{
 /* NAVIGATION */
 .nav-container{
     background: #555;
-    bottom: 0;
     display: inline-block;
+    height: 100%;
     position: fixed;
-    top: 0;
     width: 0;
     opacity: 0;
     overflow: hidden;
