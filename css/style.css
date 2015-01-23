@@ -163,6 +163,12 @@ header button:focus{
 }
 
 /* HOME */
+.home h1{
+    font-size: 4rem;
+}
+.home h1+p{
+    font-size: 2rem;
+}
 .resume{
     color: #FFF;
 }
