@@ -6,7 +6,7 @@ define([
 	'FooterView',
 	'HomeView',
 	'PortfolioCompositeView',
-	'SocialMediaView',
+	'SocialCodingView',
 	'ModalDialogsCollection',
 	'DialogModel',
 	'DialogView',
@@ -15,7 +15,7 @@ define([
 ], 
 
 	function(Backbone, Marionette, layoutView, headerView, footerView,
-			 homeView, portfolioCompositeView, socialMediaView, modalDialogsCollection, dialogModal, dialogView, navMenuView, vent){
+			 homeView, portfolioCompositeView, socialCodingView, modalDialogsCollection, dialogModal, dialogView, navMenuView, vent){
 		'use strict'
 
 		var app = new Backbone.Marionette.Application();
@@ -39,8 +39,8 @@ define([
 			app.layout.mainContentRegion.show(new portfolioCompositeView({ collection: new modalDialogsCollection()}));
 		});
 
-		vent.on('socialMedia', function(){
-			app.layout.mainContentRegion.show(new socialMediaView());
+		vent.on('socialCoding', function(){
+			app.layout.mainContentRegion.show(new socialCodingView());
 		});
 
 		vent.on('show:nav:menu', function(elements){

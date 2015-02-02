@@ -24,7 +24,7 @@ require.config({
         LayoutView: "views/layout",
         NavMenuView: "views/navMenuView",
         PortfolioView: "views/portfolioView",
-        SocialMediaView: "views/socialMediaView",
+        SocialCodingView: "views/socialCodingView",
 
         // Composite Views
         PortfolioCompositeView: "views/portfolioCompositeView",

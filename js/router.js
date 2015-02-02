@@ -9,7 +9,7 @@ define([
 			appRoutes: {
 				'': 'home',
 				'portfolio': 'portfolio',
-				'social-media': 'socialMedia',
+				'social-coding': 'socialCoding',
 				'*actions': 'home'
 			}
 		});

@@ -14,8 +14,8 @@ define([
 			portfolio: function(){
 				vent.trigger('portfolio');
 			},
-			socialMedia: function(){
-				vent.trigger('socialMedia');
+			socialCoding: function(){
+				vent.trigger('socialCoding');
 			}
 		});
 	}

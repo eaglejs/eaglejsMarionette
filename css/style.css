@@ -124,6 +124,7 @@ header button:focus{
     margin: 0;
 }
 .nav-container a:before{
+    color: orange;
     margin-right: 10px;
 }
 .nav-container a{
@@ -134,7 +135,8 @@ header button:focus{
     width: 100%;
 }
 .nav-container a:hover,
-.nav-container a:focus{
+.nav-container a:focus,
+.nav-container .selected{
     background: #333;
     border-bottom: 5px solid orange;
     color: orange;
@@ -233,11 +235,11 @@ header button:focus{
     max-height: 200px;
 }
 
-/* SOCIAL-MEDIA */
-.social-media-items{
+/* SOCIAL-CODING */
+.social-coding-items{
     vertical-align: top;
 }
-.social-media a{
+.social-coding a{
     background: #555; /*#A5A5A5;*/
     border-radius: 50%;
     color: #FFF;
@@ -246,8 +248,8 @@ header button:focus{
     padding: 25px;
     width: 150px;
 }
-.social-media a:hover,
-.social-media a:focus{
+.social-coding a:hover,
+.social-coding a:focus{
     background: orange;
     color: #333;
     -moz-transition:
@@ -265,7 +267,7 @@ header button:focus{
     color: inherit;
 }
 /* CSS that spans across multiple pages */
-.home, .portfolio, .social-media, .font-icons {
+.home, .portfolio, .social-coding, .font-icons {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
     animation: fadein 1s;
@@ -284,7 +286,7 @@ header button:focus{
 }
 
 .portfolio-section .col-xs-3,
-.social-media .col-xs-3 {
+.social-coding .col-xs-3 {
     float: none;
     display: inline-block;
     width: inherit;
