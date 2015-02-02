@@ -4,17 +4,28 @@ define(['backbone', 'marionette', 'jquery', 'underscore', 'text!../html/navMenu.
 		return Backbone.Marionette.ItemView.extend({
 			tagName: 'ul',
 			template: _.template(template),
-			onShow: function(){
-				var $currentPage = $('#site-container > div'),
+			events: {
+				'click a': 'handleSelected'
+			},
+			onRender: function(){
+				var $currentPage = $('#main-content > div'),
+					navMenuBtns = this.el.querySelectorAll('a');
+
+					if ($currentPage.hasClass('home')){
+						navMenuBtns[0].classList.add('selected');
+					} else if ($currentPage.hasClass("portfolio")){
+						navMenuBtns[1].classList.add('selected');
+					} else if ($currentPage.hasClass("social-coding")){
+						navMenuBtns[2].classList.add('selected');
+					}
+			},
+			handleSelected: function(e){
+				var $currentTarget = $(e.currentTarget),
 					$navMenuBtns = $('.nav-container a');
 
-					if ($currentPage === "home"){
-						$navMenBtns[0].addClass('selected');
-					} else if ($currentPage === "portfolio"){
-						$navMenBtns[1].addClass('selected');
-					} else if ($currentPage === "social-coding"){
-						$navMenBtns[1].addClass('selected');
-					}
+					$navMenuBtns.removeClass('selected');
+
+					$currentTarget.addClass('selected');
 			}
 		});
 	}
