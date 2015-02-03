@@ -97,6 +97,12 @@ header button:focus{
         color .2s .1s;
 }
 /* NAVIGATION */
+.nav-container,
+.site-section{
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
 .nav-container{
     background: #555;
     display: inline-block;
@@ -105,12 +111,6 @@ header button:focus{
     width: 0;
     opacity: 0;
     overflow: hidden;
-    -moz-transition: width .5s,
-        opacity .5s;
-    -webkit-transition: width .5s,
-        opacity .5s;
-    transition: width: .5s,
-        opacity .5s;
 }
 .nav-container.menu-open{
     width: 25%;
@@ -144,12 +144,9 @@ header button:focus{
 }
 .site-section{
     left: 0;
-    -moz-transition: left .5s;
-    -webkit-transition: left .5s;
-    transition: left .5s;
+    position: absolute;
 }
 .site-section.menu-open{
-    position: absolute;
     right: 0;
     left: 25%;
 }
