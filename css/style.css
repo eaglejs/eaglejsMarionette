@@ -145,6 +145,7 @@ header button:focus{
 .site-section{
     left: 0;
     position: absolute;
+    right: 0;
 }
 .site-section.menu-open{
     right: 0;
