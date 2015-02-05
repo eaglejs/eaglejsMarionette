@@ -97,12 +97,12 @@ header button:focus{
         color .2s .1s;
 }
 /* NAVIGATION */
-/*.nav-container,
+.nav-container,
 .site-section{
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
     transition: all .5s;
-}*/
+}
 .nav-container{
     background: #555;
     display: inline-block;
