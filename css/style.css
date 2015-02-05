@@ -97,12 +97,12 @@ header button:focus{
         color .2s .1s;
 }
 /* NAVIGATION */
-.nav-container,
+/*.nav-container,
 .site-section{
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
     transition: all .5s;
-}
+}*/
 .nav-container{
     background: #555;
     display: inline-block;
@@ -148,7 +148,6 @@ header button:focus{
     right: 0;
 }
 .site-section.menu-open{
-    right: 0;
     left: 25%;
 }
 
@@ -156,7 +155,7 @@ header button:focus{
 .rounded-img {
     width: 200px;
     border-radius: 50%;
-    background: #555;/*#A5A5A5;*/
+    background: #555;
     padding: 7px;
     margin: 10px 0;
 }

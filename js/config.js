@@ -8,6 +8,7 @@ require.config({
         jquery: "libs/jquery",
         marionette: "libs/marionette",
         underscore: "libs/underscore",
+        velocity: "libs/velocity",
         vent: "libs/vent",
 
         // Models
@@ -45,7 +46,10 @@ require.config({
         backbone: {
             deps: ['jquery', 'underscore', 'bootstrap'],
             exports: 'backbone'
-        }
+        },
+        velocity: {
+            deps: [ "jquery" ]
+        },
     }
 });
 define(['app', 'controller', 'router'], function(app, controller, router){
