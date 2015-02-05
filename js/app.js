@@ -48,14 +48,10 @@ define([
 		vent.on('show:nav:menu', function(elements){
 			if (elements.$navContainer.html().length){
 				app.layout.navMenuRegion.empty();
-				/*elements.$siteSection.velocity({ left: 0 });
-				elements.$navContainer.velocity({ width: 0, opacity: 0 });*/
 				elements.$siteSection.removeClass('menu-open');
 				elements.$navContainer.removeClass('menu-open');
 			} else{
 				app.layout.navMenuRegion.show(new navMenuView());
-				/*elements.$siteSection.velocity({ left: "200px"});
-				elements.$navContainer.velocity({ width: "200px", opacity: 1 });*/
 				elements.$siteSection.addClass('menu-open');
 				elements.$navContainer.addClass('menu-open');
 			}
