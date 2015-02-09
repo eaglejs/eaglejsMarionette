@@ -99,6 +99,7 @@ header button:focus{
     background: #555;
     height: 100%;
     left: -25%;
+    margin-top: 50px;
     position: fixed;
     width: 25%;
     transition: 500ms ease all;
@@ -141,14 +142,12 @@ header button:focus{
 .site-section{
     -webkit-transition: 500ms ease all;
     transition: 500ms ease all;
-    width: 100%;
-    position: absolute;
-    left: 0;
 }
 .nav-open .site-section {
-    right: 0;
-    left: 25%;
-    width: 75%;
+    transform: translateX(25%);
+    transform: translate3d(25%, 0, 0);
+    -webkit-transform: translateX(25%);
+    -webkit-transform: translate3d(25%, 0, 0);
 }
 
 /* MISC */
@@ -308,8 +307,10 @@ header button:focus{
         width: 50%;
     }
     .nav-open .site-section {
-        left: 50%;
-        width: 50%;
+        transform: translateX(50%);
+        transform: translate3d(50%, 0, 0);
+        -webkit-transform: translateX(50%);
+        -webkit-transform: translate3d(50%, 0, 0);
     }
 }
 /* No greater than 687px, no less than 492px */
@@ -319,8 +320,10 @@ header button:focus{
         width: 35%;
     }
     .nav-open .site-section {
-        left: 35%;
-        width: 65%;
+        transform: translateX(35%);
+        transform: translate3d(35%, 0, 0);
+        -webkit-transform: translateX(35%);
+        -webkit-transform: translate3d(35%, 0, 0);
     }
 }
 @media (min-width: 56.25rem){ /* 900px */
