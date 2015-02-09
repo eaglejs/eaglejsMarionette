@@ -10,8 +10,7 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'vent', 'text!../html
             showNavMenu: function(){
                 var elements = {
                     $body: $('body'),
-                    $navContainer: $('.nav-container'),
-                    $siteSection: $('.site-section')
+                    $navContainer: $('.nav-container')
                 }
             	vent.trigger('show:nav:menu', elements);
             }

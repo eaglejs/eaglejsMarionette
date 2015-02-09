@@ -48,26 +48,13 @@ section{
     height: 0;
     clear: both;
 }
+.site-container {
+    overflow: hidden;
+}
 p{
     color: #FFF;
     line-height: 1.2em;
     margin-bottom: 20px;
-}
-.site-container {
-    position: relative;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    -webkit-transition: 500ms ease all;
-    transition: 500ms ease all;
-}
-.nav-open .site-container{
-    -webkit-transform: translateX(200px);
-    transform: translateX(200px);
-    transform: translate3d(200px, 0, 0);
-    -webkit-transform: translate3d(200px, 0, 0);
 }
 #main-content{
     margin: 0 auto;
@@ -110,23 +97,25 @@ header button:focus{
         color .2s .1s;
 }
 /* NAVIGATION */
-.nav-container,
-.site-section{
-    -moz-transition: all .5s ease;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-}
 .nav-container{
     background: #555;
-    display: inline-block;
     height: 100%;
-    left: -200px;
+    left: -25%;
     position: fixed;
-    top: 0;
+    width: 25%;
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+    transition: 500ms ease all;
+    -webkit-transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: 500ms ease all;
     opacity: 0;
-    width: 200px;
 }
-.nav-container.menu-open{
+.nav-open .nav-container {
+    transform: translateX(100%);
+    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translateX(100%);
+    -webkit-transform: translate3d(100%, 0, 0);
     opacity: 1;
 }
 .nav-container ul{
@@ -156,8 +145,14 @@ header button:focus{
     text-decoration: none;
 }
 .site-section{
-    position: absolute;
-    right: 0;
+    -webkit-transition: 500ms ease all;
+    transition: 500ms ease all;
+}
+.nav-open .site-section {
+    transform: translateX(25%);
+    transform: translate3d(25%, 0, 0);
+    -webkit-transform: translateX(25%);
+    -webkit-transform: translate3d(25%, 0, 0);
 }
 
 /* MISC */
@@ -311,23 +306,6 @@ header button:focus{
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 30.69rem){ /* 491px */
-    .nav-container.menu-open{
-        width: 50%;
-    }
-    .site-section.menu-open{
-        left: 50%;
-    }
-}
-/* No greater than 687px, no less than 492px */
-@media (max-width: 42.94rem) and (min-width: 30.75rem){ 
-    .nav-container.menu-open{
-        width: 35%;
-    }
-    .site-section.menu-open{
-        left: 35%;
-    }
-}
 @media (min-width: 56.25rem){ /* 900px */
     .modal-dialog{
         width: 900px;

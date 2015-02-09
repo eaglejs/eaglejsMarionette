@@ -49,11 +49,9 @@ define([
 			if (elements.$navContainer.html().length){
 				app.layout.navMenuRegion.empty();
 				elements.$body.removeClass('nav-open');
-				elements.$navContainer.removeClass('menu-open');
 			} else{
 				app.layout.navMenuRegion.show(new navMenuView());
 				elements.$body.addClass('nav-open');
-				elements.$navContainer.addClass('menu-open');
 			}
 		});
 
