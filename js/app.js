@@ -47,12 +47,17 @@ define([
 
 		vent.on('show:nav:menu', function(elements){
 			if (elements.$navContainer.html().length){
-				app.layout.navMenuRegion.empty();
 				elements.$body.removeClass('nav-open');
+				app.layout.navMenuRegion.empty();
 			} else{
 				app.layout.navMenuRegion.show(new navMenuView());
 				elements.$body.addClass('nav-open');
 			}
+		});
+
+		vent.on('hide:nav:menu', function(elements){
+			elements.$body.removeClass('nav-open');
+			app.layout.navMenuRegion.empty();
 		});
 
 		vent.on('show:dialogView', function(model){
