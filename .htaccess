@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{QUERY_STRING} ^_escaped_fragmenti=(.*)$
+RewriteRule (.*) http://www.eagle-js.com:3000/%1? [P]
