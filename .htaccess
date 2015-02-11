@@ -1,4 +1,6 @@
 RewriteEngine on
-
 RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
 RewriteRule (.*) http://www.eagle-js.com:3000/%1? [P]
+
+RewriteCond %{HTTP_USER_AGENT} ^DuckDuckBot/1.0;
+RewriteRule (.*) http://address-of-seoserver:3000/%1? [P]
