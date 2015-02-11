@@ -153,6 +153,8 @@ header button:focus{
     text-decoration: none;
 }
 .site-section{
+    height: 100vh;
+    overflow-x: auto;
     -webkit-transition: 500ms ease all;
     transition: 500ms ease all;
 }
