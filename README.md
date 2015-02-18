@@ -1,4 +1,4 @@
-surakusaMarionette
+eaglejsaMarionette
 ==================
 
-Converting my website to Marionette as a learning experience.
+Converting my website from Backbone to Marionette as a learning experience.
