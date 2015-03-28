@@ -1,8 +1,11 @@
-<h1><a href="<%= url %>" target="_blank"><%= title %></a></h1>
-<p>
-    <%= about %>
-</p>
-<p>
-    <%= toolsUsed %>
-</p>
-<a href="<%= url %>" target="_blank"><img src="<%= img %>" class="img-responsive" alt="<%= title %>"></a>
+
+<a href="#">
+    <div class="frame">
+        <div class="content">
+            <img src="<%- smallImg %>" class="img-responsive" alt="<%- alt %>">
+        </div>
+    </div>
+    <p class="text-center">
+        <%- title %>
+    </p>
+</a>
