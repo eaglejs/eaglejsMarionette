@@ -11,7 +11,6 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'vent', 'text!../html
                 headerRegion: "header",
                 mainContentRegion: "#main-content",
                 navMenuRegion: ".nav-container",
-                portfolioDialog: ".portfolio-dialog",
                 footerRegion: "footer"
             },
             hideNavMenu: function(){

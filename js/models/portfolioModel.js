@@ -2,7 +2,7 @@ define([
     'backbone'
 ],
     function(Backbone) {
-        var modalDialog = Backbone.Model.extend({
+        return Backbone.Model.extend({
             defaults: {
                 'title': '',
                 'img': '',
@@ -12,7 +12,5 @@ define([
                 'smallImg': ''
             }
         });
-
-        return modalDialog;
     }
 );

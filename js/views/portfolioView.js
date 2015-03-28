@@ -5,12 +5,10 @@ define([ 'backbone', 'marionette', 'vent', 'jquery', 'underscore', 'text!../html
         	className: 'col-xs-3',
             template : _.template(template),
             events: {
-            	'click a': 'showDialogView'
+            	'click button': 'showPortfolioItem'
             },
-            showDialogView: function(e){
-            	e.preventDefault();
-
-            	vent.trigger('show:dialogView', this.model);
+            showPortfolioItem: function(){
+            	vent.trigger('show:portfolioItem', this.model);
             }
 
         });
