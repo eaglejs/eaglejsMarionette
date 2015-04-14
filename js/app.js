@@ -47,7 +47,6 @@ define([
 				elements.$body.removeClass('nav-open');
 				elements.$overlay.removeClass('show');
 				app.layout.navMenuRegion.empty();
-
 			} else{
 				app.layout.navMenuRegion.show(new navMenuView());
 				elements.$body.addClass('nav-open');
@@ -57,7 +56,7 @@ define([
 
 		vent.on('hide:nav:menu', function(elements){
 			elements.$body.removeClass('nav-open');
-			elements.$overlay.addClass('show');
+			elements.$overlay.removeClass('show');
 			app.layout.navMenuRegion.empty();
 		});
 
