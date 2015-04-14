@@ -8,7 +8,7 @@ define([ 'backbone', 'marionette', 'vent', 'jquery', 'underscore', 'text!../html
             	'click button': 'showPortfolioItem'
             },
             showPortfolioItem: function(){
-            	vent.trigger('show:portfolioItem', this.model);
+            	vent.trigger('show:portfolioDetails', this.model);
             }
 
         });

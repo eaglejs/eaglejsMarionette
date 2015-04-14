@@ -5,7 +5,8 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'vent', 'text!../html
             className: "site-container",
             template: _.template(template),
             events: {
-                "click .site-section": "hideNavMenu"
+                "click .site-section": "hideNavMenu",
+                "click .overlay": "hideNavMenu"
             },
             regions: {
                 headerRegion: "header",
@@ -15,7 +16,8 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'vent', 'text!../html
             },
             hideNavMenu: function(){
                 var elements = {
-                    $body: $('body')
+                    $body: $('body'),
+                    $overlay: $('.overlay')
                 };
                vent.trigger("hide:nav:menu", elements);
             }

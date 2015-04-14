@@ -17,7 +17,7 @@ require.config({
         PortfolioCollection: "collections/portfolioCollection",
 
         // Views
-        PortfolioItem: "views/portfolioItem",
+        PortfolioDetailsView: "views/portfolioDetailsView",
         FooterView: "views/footerView",
         HeaderView: "views/headerView",
         HomeView: "views/homeView",

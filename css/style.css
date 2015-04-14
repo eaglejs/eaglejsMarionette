@@ -48,6 +48,9 @@ section{
     height: 0;
     clear: both;
 }
+.show {
+    display: block;
+} 
 .site-container {
     overflow: hidden;
 }
@@ -164,6 +167,14 @@ header button:focus{
     -webkit-transform: translateX(25%);
     -webkit-transform: translate3d(25%, 0, 0);
 }
+.overlay {
+    display: none;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    width: 75%;
+    z-index: 1000;
+}
 
 /* MISC */
 .rounded-img {
@@ -197,12 +208,15 @@ header button:focus{
 }
 
 /* PORTFOLIO - SECTION */
-.portfolio-section a {
+.portfolio-section button {
     background: #555;
+    border: none;
+    margin-bottom: 10px;
+    padding: 0;
     text-decoration: none;
 }
-.portfolio-section a:hover,
-.portfolio-section a:focus{
+.portfolio-section button:hover,
+.portfolio-section button:focus{
     background: orange;
     -moz-transition:
         background .2s .1s;
@@ -211,7 +225,7 @@ header button:focus{
     transition:
         background .2s .1s;
 }
-.portfolio-section a:after{
+.portfolio-section button:after{
     content: '';
     -moz-transition:
         background .2s .1s;
@@ -220,10 +234,10 @@ header button:focus{
     transition:
         background .2s .1s;
 }
-.portfolio-section a:hover:after,
-.portfolio-section a:focus:after {
+.portfolio-section button:hover:after,
+.portfolio-section button:focus:after {
     background: orange;
-    bottom: 41px;
+    bottom: 51px;
     content: '';
     height: 10px;
     position: absolute;
@@ -233,10 +247,14 @@ header button:focus{
     width: 10px;
 }
 .portfolio-section .frame {
-    background: inherit; /*#A5A5A5;*/
-    margin: 10px 0;
+    background: inherit;
     padding: 7px;
     
+}
+.portfolio-section .frame + p{
+    background: #333;
+    margin: 0;
+    padding: 15px;
 }
 .portfolio-section .frame:hover {
     background: inherit;
@@ -244,6 +262,9 @@ header button:focus{
 .portfolio-section .frame .content{
     overflow: hidden;
     max-height: 200px;
+}
+.portfolio-details {
+    overflow-y: auto;
 }
 
 /* SOCIAL-CODING */
@@ -278,7 +299,7 @@ header button:focus{
     color: inherit;
 }
 /* CSS that spans across multiple pages */
-.home, .portfolio, .social-coding, .font-icons {
+.home, .portfolio, .social-coding, .font-icons, .portfolio-details {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
     animation: fadein 1s;

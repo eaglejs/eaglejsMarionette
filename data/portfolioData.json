@@ -4,7 +4,7 @@
             "title": "Dept. Veterans Affairs",
             "img": "img/portfolio-images/scv3.png",
             "smallImg": "img/portfolio-images/scv3-small.png",
-            "about": "This is one of a few applications/applets I helped to create and this is my latest work. The Scheduling Calendar View allows a VA Clerk to schedule appointments for Military Veterans as well as search for patients, patient information, schedules, messaging, and viewing pending requests. This application interacts with an old (dos-like) system that the VA still uses today.",
+            "about": "<p>This is one of a few applications/applets I helped to create and this is my latest work. The Scheduling Calendar View allows a VA Clerk to schedule appointments for Military Veterans as well as search for patients, patient information, schedules, messaging, and viewing pending requests. This application interacts with an old (dos-like) system which ultimately replaces it's out-of-date functionality.</p><p>In March of 2015, Secretary of the VA, Robert McDonald, was meeting with Newt Gingrich. During their meeting, Mr. Gingrich pulled out his phone and said, \"Bob, what you really need is the ability for the veterans to manager their care on their phones, like I can.\" Secretary McDonald didn't yet know that the VA had done anything of importance with Mobile Applications, and said he concurred. The next day, Secretary McDonald's Chief Innovations Officer received a domonstration of the Scheduling Caldenar View/Veteran Appointment Request application, as well as a number of others developed with the help of the LongView Mobile Team. The Innovations Officer, in turn, demonstrated the Scheduling application for both Secretary McDonald and Newt Gingrich, both of whom said the application was perfect, and exactly what the Veterans need. They congratulated the project team and the LongView Consultants on their forward thinking and creative work. I received special thanks and recognition for my efforts.</p>",
             "toolsUsed": "Tools: Node, Marionette, Angular, Backbone, Handlebars, Underscore, Require, Modernizr, JQM, Twitter Bootstrap, Grunt.",
             "alt": "va.gov",
             "url": "http://www.va.gov"
@@ -13,7 +13,7 @@
             "title": "Healthcare",
             "img": "img/portfolio-images/healthcare.png",
             "smallImg": "img/portfolio-images/healthcare-small.png",
-            "about": "Responsibilities include working in a fast-pace, agile environment, creating responsive web pages for all three sections of the Federally-Facilitated Marketplace. My work has been presented at the White House for the new health care law that was passed under President Barack Hussein Obama.",
+            "about": "<p>Responsibilities include working in a fast-pace, agile environment, creating responsive web pages for all three sections of the Federally-Facilitated Marketplace. My work has been presented at the White House for the new health care law that was passed under President Barack Hussein Obama.</p>",
             "toolsUsed": "Tools: HTML5, CSS3, Twitter Bootstrap, dataTables.js, Javascript/jQuery",
             "alt": "healthcare.gov",
             "url": "http://www.healthcare.gov"
@@ -22,7 +22,7 @@
             "title": "Medicare",
             "img": "img/portfolio-images/medicare.png",
             "smallImg": "img/portfolio-images/medicare-small.png",
-            "about": "Responsibilities include working in a fast-pace, agile environment, using asp.net to create HTML5/CSS3 pages.",
+            "about": "<p>Responsibilities include working in a fast-pace, agile environment, using asp.net to create HTML5/CSS3 pages.</p>",
             "toolsUsed": "Tools: HTML5, CSS3, Javascript/jQuery, asp.net",
             "alt": "Medicare.gov",
             "url": "http://www.medicare.gov"
@@ -31,7 +31,7 @@
             "title": "Lucinda Team",
             "img": "img/portfolio-images/lucindateam.png",
             "smallImg": "img/portfolio-images/lucindateam-small.png",
-            "about": "Competing against 2 other companies, I was awarded the contract to develop a responsive website from Wordpress that the client could ultimately maintain. The goal was to create a responsive website that will work on mobile devices, that has SEO optimization.",
+            "about": "<p>Competing against 2 other companies, I was awarded the contract to develop a responsive website from Wordpress that the client could ultimately maintain. The goal was to create a responsive website that will work on mobile devices, that has SEO optimization.</p>",
             "toolsUsed": "Tools: Google Analytics, Search Engine Optimization, HTML5, CSS3, javascript/jQuery, Wordpress, PHP, MySQL",
             "alt": "lucindateam.com",
             "url": "http://www.lucindateam.com"
@@ -40,7 +40,7 @@
             "title": "Eurasia Foundation",
             "img": "img/portfolio-images/ebl.png",
             "smallImg": "img/portfolio-images/ebl-small.png",
-            "about": "While working with DRT Inc., A colleague and I submited a bid for a contract to create a website that will inform those in Central Asia of their rights, as well as how to seek help in the event they have been wrongfully acctoolsUsed. This is a relatively small website that took about six weeks to complete, and toolsUsed a search module that required back-end resources to search pdf documents and then return those reults on the site.",
+            "about": "<p>While working with DRT Inc., A colleague and I submited a bid for a contract to create a website that will inform those in Central Asia of their rights, as well as how to seek help in the event they have been wrongfully acctoolsUsed. This is a relatively small website that took about six weeks to complete, and toolsUsed a search module that required back-end resources to search pdf documents and then return those reults on the site.</p>",
             "toolsUsed": "Tools: HTML4, CSS2, PHP, MySQL, AWS EC2 Servers, javascript/jQuery",
             "alt": "equalbeforethelaw.org",
             "url": "http://www.equalbeforethelaw.org"
@@ -49,7 +49,7 @@
             "title": "SBA",
             "img": "img/portfolio-images/sba.png",
             "smallImg": "img/portfolio-images/sba-small.png",
-            "about": "Working with the Small Business Administration, I was able to create a large website that the client would ultimately maintain themselves using Drupal as our CMS. This site has two main structures… The main informational website, and the community forums. My responsibilities include creating HTML, CSS , maintaining the databases as well as the Amazon Web Services, generating builds and updating the Small Business Administrations main website.",
+            "about": "<p>Working with the Small Business Administration, I was able to create a large website that the client would ultimately maintain themselves using Drupal as our CMS. This site has two main structures… The main informational website, and the community forums. My responsibilities include creating HTML, CSS , maintaining the databases as well as the Amazon Web Services, generating builds and updating the Small Business Administrations main website.</p>",
             "toolsUsed": "Tools: HTML4, CSS2, PHP, MySQL, AWS EC2 Servers, IIS, javascript/jQuery",
             "alt": "sba.gov",
             "url": "http://www.sba.gov"

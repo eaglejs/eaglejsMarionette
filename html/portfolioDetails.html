@@ -1,10 +1,16 @@
-<button id="go-back">back</button>
-
-<h1><a href="<%= url %>" target="_blank"><%= title %></a></h1>
-<p>
-    <%= about %>
-</p>
-<p>
-    <%= toolsUsed %>
-</p>
-<a href="<%= url %>" target="_blank"><img src="<%= img %>" class="img-responsive" alt="<%= title %>"></a>
+<div class="row">
+	<div class="col-xs-12">
+		<a href="<%= url %>" target="_blank"><h1><%= title %></h1></a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 col-xs-12">
+	    <%= about %>
+		<p>
+		    <%= toolsUsed %>
+		</p>
+	</div>
+	<div class="col-sm-6 col-xs-12">
+		<a href="<%= url %>" target="_blank"><img src="<%= img %>" class="img-responsive" alt="<%= title %>"></a>
+	</div>
+</div>

@@ -8,12 +8,13 @@ define([
 	'PortfolioCompositeView',
 	'SocialCodingView',
 	'PortfolioCollection',
+	'PortfolioDetailsView',
 	'NavMenuView',
 	'vent'
 ], 
 
 	function(Backbone, Marionette, layoutView, headerView, footerView,
-			 homeView, portfolioCompositeView, socialCodingView, portfolioCollection, navMenuView, vent){
+			 homeView, portfolioCompositeView, socialCodingView, portfolioCollection, portfolioDetailsView, navMenuView, vent){
 		'use strict'
 
 		var app = new Backbone.Marionette.Application();
@@ -44,20 +45,24 @@ define([
 		vent.on('show:nav:menu', function(elements){
 			if (elements.$navContainer.html().length){
 				elements.$body.removeClass('nav-open');
+				elements.$overlay.removeClass('show');
 				app.layout.navMenuRegion.empty();
+
 			} else{
 				app.layout.navMenuRegion.show(new navMenuView());
 				elements.$body.addClass('nav-open');
+				elements.$overlay.addClass('show');
 			}
 		});
 
 		vent.on('hide:nav:menu', function(elements){
 			elements.$body.removeClass('nav-open');
+			elements.$overlay.addClass('show');
 			app.layout.navMenuRegion.empty();
 		});
 
-		vent.on('show:portfolioItem', function(model){
-			app.layout.mainContentRegion.show(new portfolioItem({model: model}));
+		vent.on('show:portfolioDetails', function(model){
+			app.layout.mainContentRegion.show(new portfolioDetailsView({model: model}));
 		});
 
 		return app;
