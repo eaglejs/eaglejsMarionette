@@ -44,19 +44,25 @@ define([
 
 		vent.on('show:nav:menu', function(elements){
 			if (elements.$navContainer.html().length){
+				$(window).off("resize");
 				elements.$body.removeClass('nav-open');
-				elements.$overlay.removeClass('show');
+				elements.$overlay.addClass('hide');
 				app.layout.navMenuRegion.empty();
 			} else{
+				elements.$navContainer.height($(document).height() - 50);
+				$(window).on("resize", function () {
+					elements.$navContainer.height($(document).height() - 50);
+				});
 				app.layout.navMenuRegion.show(new navMenuView());
 				elements.$body.addClass('nav-open');
-				elements.$overlay.addClass('show');
+				elements.$overlay.removeClass('hide');
 			}
 		});
 
 		vent.on('hide:nav:menu', function(elements){
+			$(window).off("resize");
 			elements.$body.removeClass('nav-open');
-			elements.$overlay.removeClass('show');
+			elements.$overlay.addClass('hide');
 			app.layout.navMenuRegion.empty();
 		});
 

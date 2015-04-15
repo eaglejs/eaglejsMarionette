@@ -48,9 +48,6 @@ section{
     height: 0;
     clear: both;
 }
-.show {
-    display: block;
-} 
 .site-container {
     overflow: hidden;
 }
@@ -100,10 +97,9 @@ header button:focus{
 /* NAVIGATION */
 .nav-container{
     background: #555;
-    height: 100%;
     left: -25%;
     margin-top: 50px;
-    position: fixed;
+    position: absolute;
     width: 25%;
     transition: 500ms ease all;
     -webkit-transition: 500ms ease all;
@@ -168,7 +164,6 @@ header button:focus{
     -webkit-transform: translate3d(25%, 0, 0);
 }
 .overlay {
-    display: none;
     height: 100vh;
     position: absolute;
     right: 0;
