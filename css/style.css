@@ -97,9 +97,10 @@ header button:focus{
 /* NAVIGATION */
 .nav-container{
     background: #555;
+    height: 100vh;
     left: -25%;
     margin-top: 50px;
-    position: absolute;
+    position: fixed;
     width: 25%;
     transition: 500ms ease all;
     -webkit-transition: 500ms ease all;
