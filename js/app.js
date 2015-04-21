@@ -48,7 +48,6 @@ define([
 				elements.$overlay.addClass('hide');
 				app.layout.navMenuRegion.empty();
 			} else{
-				elements.$navContainer.height($(document).height() - 50);
 				app.layout.navMenuRegion.show(new navMenuView());
 				elements.$body.addClass('nav-open');
 				elements.$overlay.removeClass('hide');
