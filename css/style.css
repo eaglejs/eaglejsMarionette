@@ -48,9 +48,6 @@ section{
     height: 0;
     clear: both;
 }
-.site-container {
-    overflow: hidden;
-}
 p{
     color: #FFF;
     line-height: 1.2em;
@@ -161,7 +158,6 @@ header button:focus{
 }
 .site-section{
     height: 100vh;
-    overflow-x: auto;
     -webkit-transition: 500ms ease all;
     transition: 500ms ease all;
 }

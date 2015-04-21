@@ -13,7 +13,7 @@
             "title": "Healthcare",
             "img": "img/portfolio-images/healthcare.png",
             "smallImg": "img/portfolio-images/healthcare-small.png",
-            "about": "<p>Responsibilities include working in a fast-pace, agile environment, creating responsive web pages for all three sections of the Federally-Facilitated Marketplace. My work has been presented at the White House for the new health care law that was passed under President Barack Hussein Obama.</p>",
+            "about": "<p>Responsibilities include working in a fast-pace, agile environment, creating responsive web pages for all three sections of the Federally-Facilitated Marketplace. My work has been presented at the White House for the new health care law that was passed under President Barack Hussein Obama.</p><p>My main position with this site was to create HTML mockups that would then be passed on to the Front-End developers to implement. I was not responsible for any logic on this system, front-end or back-end.</p>",
             "toolsUsed": "Tools: HTML5, CSS3, Twitter Bootstrap, dataTables.js, Javascript/jQuery",
             "alt": "healthcare.gov",
             "url": "http://www.healthcare.gov"
