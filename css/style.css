@@ -55,7 +55,6 @@ p{
 }
 #main-content{
     margin: 0 auto;
-    overflow-y: auto;
     padding-top: 60px;
     width: 65%;
 }
