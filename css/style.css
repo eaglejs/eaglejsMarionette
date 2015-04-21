@@ -53,6 +53,9 @@ p{
     line-height: 1.2em;
     margin-bottom: 20px;
 }
+#site-container {
+    overflow: auto;
+}
 #main-content{
     margin: 0 auto;
     padding-top: 60px;
@@ -167,11 +170,12 @@ header button:focus{
     -webkit-transform: translate3d(25%, 0, 0);
 }
 .overlay {
+    background: #000;
     height: 100vh;
     position: absolute;
     right: 0;
-    width: 75%;
     z-index: 1000;
+    opacity: 0;
 }
 
 /* MISC */
@@ -346,6 +350,9 @@ header button:focus{
         -webkit-transform: translateX(50%);
         -webkit-transform: translate3d(50%, 0, 0);
     }
+    .overlay {
+        width: 50%;
+    }
 }
 /* No greater than 687px, no less than 492px */
 @media (max-width: 42.94rem) and (min-width: 30.75rem){ 
@@ -358,6 +365,9 @@ header button:focus{
         transform: translate3d(35%, 0, 0);
         -webkit-transform: translateX(35%);
         -webkit-transform: translate3d(35%, 0, 0);
+    }
+    .overlay{
+        width: 65%
     }
 }
 @media (min-width: 56.25rem){ /* 900px */
