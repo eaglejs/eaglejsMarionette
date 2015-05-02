@@ -13,7 +13,6 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'vent', 'text!../html
                     $overlay: $('.overlay')
                 }
                 if ($('#menu.fa-arrow-left').length) {
-                    $('#menu').removeClass('fa-arrow-left').addClass('fa-navicon');
                     vent.trigger('portfolio');
                 } else {
                     vent.trigger('show:nav:menu', elements);

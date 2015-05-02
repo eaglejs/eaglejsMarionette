@@ -7,6 +7,9 @@ define([ 'backbone', 'marionette', 'vent', 'jquery', 'underscore', 'text!../html
             events: {
             	'click button': 'showPortfolioItem'
             },
+            onShow: function() {
+                $('#menu').removeClass('fa-arrow-left').addClass('fa-navicon');
+            },
             showPortfolioItem: function(){
                 $('#menu').removeClass('fa-navicon').addClass('fa-arrow-left');
             	vent.trigger('show:portfolioDetails', this.model);
