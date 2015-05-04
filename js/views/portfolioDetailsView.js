@@ -4,7 +4,21 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'text!../html/portfol
         return Backbone.Marionette.ItemView.extend({
         	tagName: 'section',
         	className: 'portfolio-details container-fluid',
-            template : _.template(template)
+            template : _.template(template),
+            onShow: function () {
+            	this.showMenu(true);
+            },
+            onDestroy: function () {
+            	this.showMenu(false);
+            },
+            showMenu: function (menu) {
+            	if (!menu) {
+        			$('#menu').removeClass('fa-arrow-left').addClass('fa-navicon');
+            	} else {
+            		$('#menu').removeClass('fa-navicon').addClass('fa-arrow-left');
+            	}
+                
+            }
         });
     }
 );
