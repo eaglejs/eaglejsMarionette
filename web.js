@@ -30,6 +30,7 @@ var getContent = function(url, callback) {
 var respond = function (req, res) {
   // Because we use [P] in htaccess we have access to this header
   url = 'http://' + req.headers['x-forwarded-host'] + req.params[0];
+  console.log(url);
   getContent(url, function (content) {
     res.send(content);
   });
