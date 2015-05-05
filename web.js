@@ -4,6 +4,19 @@
 var express = require('express');
 var app = express();
 
+var WebSocketServer = require('ws').Server
+  , wss = new WebSocketServer({ port: 8080 });
+
+wss.on('connection', function connection(ws) {
+
+  console.log(ws.upgradeReq.headers);
+
+  ws.on('message', function incoming(message) {
+    console.log('received: %s', message);
+  });
+
+  ws.send('something');
+});
 
 var getContent = function(url, callback) {
   var content = '';
