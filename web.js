@@ -3,7 +3,7 @@ var http = require("http"),
     path = require("path"),
     fs = require("fs"),
     spawn = require('child_process').spawn,
-    port = (process.argv[2] || 8888),
+    port = (process.argv[2] || 3000),
     prerender = process.argv[3] || false;
 
 var mimeTypes = {
