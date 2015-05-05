@@ -1,3 +1,6 @@
 RewriteEngine on
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "GET, POST, DELETE, OPTIONS"
 RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
 RewriteRule (.*) http://www.eagle-js.com:3000/%1? [P]
