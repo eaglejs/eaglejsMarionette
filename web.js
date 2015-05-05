@@ -4,20 +4,6 @@
 var express = require('express');
 var app = express();
 
-var WebSocketServer = require('ws').Server
-  , wss = new WebSocketServer({ port: 8080 });
-
-wss.on('connection', function connection(ws) {
-
-  console.log(ws.upgradeReq.headers);
-
-  ws.on('message', function incoming(message) {
-    console.log('received: %s', message);
-  });
-
-  ws.send('something');
-});
-
 var getContent = function(url, callback) {
   var content = '';
   // Here we spawn a phantom.js process, the first element of the 
@@ -41,6 +27,7 @@ var getContent = function(url, callback) {
 };
 
 var respond = function (req, res) {
+  debugger;
   // Because we use [P] in htaccess we have access to this header
   url = 'http://' + req.headers['x-forwarded-host'] + req.params[0];
   console.log(url);
