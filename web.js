@@ -81,4 +81,4 @@ http.createServer(function(request, response) {
 }).listen(parseInt(port, 10));
 
 
-console.log("Running on http://localhost:" + port + " with pre-render " + (prerender ? 'enabled' : 'disabled') + " \nCTRL + C to shutdown");
+console.log("Running on http://www.eagle-js.com:" + port + " with pre-render " + (prerender ? 'enabled' : 'disabled') + " \nCTRL + C to shutdown");
