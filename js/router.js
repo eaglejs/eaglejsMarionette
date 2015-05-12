@@ -8,8 +8,8 @@ define([
 		var MyRouter = Backbone.Marionette.AppRouter.extend({
 			appRoutes: {
 				'': 'home',
-				'portfolio': 'portfolio',
-				'social-coding': 'socialCoding',
+				'!portfolio': 'portfolio',
+				'!social-coding': 'socialCoding',
 				'*actions': 'home'
 			}
 		});

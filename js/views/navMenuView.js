@@ -1,5 +1,5 @@
-define(['backbone', 'marionette', 'jquery', 'underscore', 'text!../html/navMenu.html'], 
-	function(Backbone, Marionette, $, _, template){
+define(['backbone', 'marionette', 'global', 'jquery', 'underscore', 'text!../html/navMenu.html'], 
+	function(Backbone, Marionette, global, $, _, template){
 		'use strict';
 		return Backbone.Marionette.ItemView.extend({
 			tagName: 'ul',
@@ -20,11 +20,11 @@ define(['backbone', 'marionette', 'jquery', 'underscore', 'text!../html/navMenu.
 					}
 			},
 			handleSelected: function(e){
+				
 				var $currentTarget = $(e.currentTarget),
 					$navMenuBtns = $('.nav-container a');
-
+					
 					$navMenuBtns.removeClass('selected');
-
 					$currentTarget.addClass('selected');
 			}
 		});
