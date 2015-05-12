@@ -1,3 +1,4 @@
-RewriteEngine on
-RewriteCond %{QUERY_STRING} ^escaped_fragment=(.)$
-RewriteRule (.) http://www.eagle-js.com:3000/%1? [P]
+RewriteEngine on 
+RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|pintrest [NC,OR]
+RewriteCond %{QUERY_STRING} _escaped_fragment_
+RewriteRule (.*) http://crawler-service/http://www.eagle-js.com/$2 [P,L]
