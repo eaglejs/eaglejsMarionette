@@ -1,6 +1,6 @@
 RewriteEngine on
 RewriteCond %{REQUEST_URI} ^/home
-RewriteRule ^(.*)$ http://%{HTTP_HOST}/# [NE,R,L]
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/ [NE,R,L]
 RewriteCond %{REQUEST_URI} ^/portfolio
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/#portfolio [NE,R,L]
 RewriteCond %{REQUEST_URI} ^/socialCoding
