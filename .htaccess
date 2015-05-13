@@ -1,5 +1,4 @@
 RewriteEngine on
 RewriteCond %{HTTP_USER_AGENT} ^googlebot [NC,OR]
-RewriteRule ^(.*)$ http://www.eagle-js.com:3000/http://www.eagle-js.com/?_escaped_fragment_=portfolio
 #RewriteCond %{QUERY_STRING} _escaped_fragment_
 #RewriteRule ^(.*)$ http://www.eagle-js.com:3000/http://www.eagle-js.com/$2 [P,L]
