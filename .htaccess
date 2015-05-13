@@ -1,4 +1,4 @@
 RewriteEngine on 
-RewriteCond %{HTTP_USER_AGENT} google [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} googlebot [NC,OR]
 RewriteCond %{QUERY_STRING} _escaped_fragment_
-RewriteRule (.) http://www.eagle-js.com:3000/http://www.eagle-js.com/$2 [P,L]
+RewriteRule (.) http://www.eagle-js.com:3000/http://www.eagle-js.com/$1 [P,L]
