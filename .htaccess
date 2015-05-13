@@ -3,9 +3,9 @@ RewriteCond %{REQUEST_URI} ^/home
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/ [NE,R,L]
 RewriteCond %{REQUEST_URI} ^/portfolio
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/#portfolio [NE,R,L]
-RewriteCond %{REQUEST_URI} ^/socialCoding
-RewriteRule ^(.*)$ http://%{HTTP_HOST}/#socialCoding [NE,R,L]
+RewriteCond %{REQUEST_URI} ^/social-coding
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/#social-coding [NE,R,L]
 
 #RewriteCond %{HTTP_USER_AGENT} googlebot [NC,OR]
-#RewriteCond %{QUERY_STRING} ^_escaped_fragment
+#RewriteCond %{QUERY_STRING} ^_escaped_fragment_
 #RewriteRule ^(.*)$ http://www.eagle-js.com:3000/http://www.eagle-js.com/$2 [P,L]

@@ -39,7 +39,7 @@ define([
 			app.layout.mainContentRegion.show(new portfolioCompositeView({ collection: new portfolioCollection()}));
 		});
 
-		vent.on('socialCoding', function(){
+		vent.on('social-coding', function(){
 			app.layout.mainContentRegion.show(new socialCodingView());
 		});
 

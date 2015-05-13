@@ -15,7 +15,7 @@ define([
 				vent.trigger('portfolio');
 			},
 			socialCoding: function(){
-				vent.trigger('socialCoding');
+				vent.trigger('social-coding');
 			}
 		});
 	}
