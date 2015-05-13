@@ -53,5 +53,7 @@ define(['app', 'controller', 'router'], function(app, controller, router){
         controller: new controller()
     });
     app.start();
-    Backbone.history.start();
+    Backbone.history.start({
+        pushState: true
+    });
 });

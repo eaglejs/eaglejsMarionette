@@ -14,8 +14,9 @@ define([
 ], 
 
 	function(Backbone, Marionette, layoutView, headerView, footerView,
-			 homeView, portfolioCompositeView, socialCodingView, portfolioCollection, portfolioDetailsView, navMenuView, vent){
-		'use strict'
+			 homeView, portfolioCompositeView, socialCodingView, portfolioCollection, 
+			 portfolioDetailsView, navMenuView, vent){
+		'use strict';
 
 		var app = new Backbone.Marionette.Application();
 
@@ -63,7 +64,27 @@ define([
 		vent.on('show:portfolioDetails', function(model){
 			app.layout.mainContentRegion.show(new portfolioDetailsView({model: model}));
 		});
-
+		
+		$(document).on("click", "a[href^='/']", function (event) {
+			var href = $(event.currentTarget).attr('href');
+		
+		  	//chain 'or's for other black list routes
+		  	var passThrough = href.indexOf('sign_out') >= 0;
+		
+		  	//Allow shift+click for new tabs, etc.
+		  	if (!passThrough && !event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey)
+		    	event.preventDefault();
+		
+		    //Remove leading slashes and hash bangs (backward compatablility)
+		    var url = href.replace(/^\//,'').replace('\#\!\/','');
+		
+		    //Instruct Backbone to trigger routing events
+		    Backbone.history.navigate(url);
+			vent.trigger(url);
+		
+		    return false;
+		}) 
+		
 		return app;
 	}
 );

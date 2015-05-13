@@ -5,7 +5,7 @@ define([
 ], 
 
 	function(Backbone, Marionette, vent){
-		'use strict'
+		'use strict';
 
 		return Backbone.Marionette.Controller.extend({
 			home: function(){
