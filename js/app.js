@@ -68,11 +68,8 @@ define([
 		$(document).on("click", "a[href^='/']", function (event) {
 			var href = $(event.currentTarget).attr('href');
 		
-		  	//chain 'or's for other black list routes
-		  	var passThrough = href.indexOf('sign_out') >= 0;
-		
 		  	//Allow shift+click for new tabs, etc.
-		  	if (!passThrough && !event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey)
+		  	if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey)
 		    	event.preventDefault();
 		
 		    //Remove leading slashes and hash bangs (backward compatablility)
