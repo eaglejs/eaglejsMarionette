@@ -1,14 +1,11 @@
 RewriteEngine on
 
-<If "%{SERVER_PORT} == 3000"> 
-	RewriteCond %{QUERY_STRING} ^_escaped_fragment_
-	RewriteRule ^(.*)$ http://www.eagle-js.com:3000/http://www.eagle-js.com/$2 [P,L]
-</If>
-<Else>
-	RewriteCond %{REQUEST_URI} ^/home$
-	RewriteRule ^(.*)$ http://%{HTTP_HOST}/ [NE,R,L]
-	RewriteCond %{REQUEST_URI} ^/portfolio$
-	RewriteRule ^(.*)$ http://%{HTTP_HOST}/#portfolio [NE,R,L]
-	RewriteCond %{REQUEST_URI} ^/social-coding$
-	RewriteRule ^(.*)$ http://%{HTTP_HOST}/#social-coding [NE,R,L]
-</Else>
+RewriteCond %{QUERY_STRING} ^_escaped_fragment_
+RewriteRule (.) http://www.eagle-js.com:3000/http://www.eagle-js.com/$2 [P,L]
+
+RewriteCond %{REQUEST_URI} ^/home$
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/ [NE,R,L]
+RewriteCond %{REQUEST_URI} ^/portfolio$
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/#portfolio [NE,R,L]
+RewriteCond %{REQUEST_URI} ^/social-coding$
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/#social-coding [NE,R,L]
