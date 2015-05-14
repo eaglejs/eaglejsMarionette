@@ -80,7 +80,7 @@ define([
 			vent.trigger(url);
 		
 		    return false;
-		}) 
+		});
 		
 		return app;
 	}
