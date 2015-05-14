@@ -3,12 +3,12 @@ RewriteEngine on
 RewriteCond %{QUERY_STRING} ^_escaped_fragment_
 RewriteRule ^(.*)$ http://www.eagle-js.com:3000/http://www.eagle-js.com/$2 [P,L]
 
-RewriteCond %{REQUEST_URI} ^/home$
-RewriteCond %{QUERY_STRING} !^_escaped_fragment_
-RewriteRule ^(.*)$ http://%{HTTP_HOST}/ [NE,R,L]
-RewriteCond %{REQUEST_URI} ^/portfolio$
-RewriteCond %{QUERY_STRING} !^_escaped_fragment_
-RewriteRule ^(.*)$ http://%{HTTP_HOST}/#portfolio [NE,R,L]
-RewriteCond %{REQUEST_URI} !^/social-coding$
-RewriteCond %{QUERY_STRING} ^_escaped_fragment_
-RewriteRule ^(.*)$ http://%{HTTP_HOST}/#social-coding [NE,R,L]
+#RewriteCond %{REQUEST_URI} ^/home$
+#RewriteCond %{QUERY_STRING} !^_escaped_fragment_
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}/ [NE,R,L]
+#RewriteCond %{REQUEST_URI} ^/portfolio$
+#RewriteCond %{QUERY_STRING} !^_escaped_fragment_
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}/#portfolio [NE,R,L]
+#RewriteCond %{REQUEST_URI} !^/social-coding$
+#RewriteCond %{QUERY_STRING} ^_escaped_fragment_
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}/#social-coding [NE,R,L]
