@@ -130,7 +130,7 @@ header button:focus{
     color: orange;
     margin-right: 10px;
 }
-.nav-container .home:before {
+.nav-container .house:before {
     content: '\f015';
     font-family: 'FontAwesome';
 }
