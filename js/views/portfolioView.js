@@ -5,7 +5,7 @@ define([ 'backbone', 'marionette', 'vent', 'jquery', 'underscore', 'text!../html
         	className: 'col-xs-3',
             template : _.template(template),
             events: {
-            	'click button': 'showPortfolioItem'
+            	'click .portfolio-item': 'showPortfolioItem'
             },
             showPortfolioItem: function(){
                 this.onBeforeDestroy = "";

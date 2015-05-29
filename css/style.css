@@ -233,15 +233,16 @@ header button:focus{
 }
 
 /* PORTFOLIO - SECTION */
-.portfolio-section button {
+.portfolio-item {
     background: #555;
     border: none;
     margin-bottom: 10px;
     padding: 0;
     text-decoration: none;
 }
-.portfolio-section button:hover,
-.portfolio-section button:focus{
+.portfolio-item:hover,
+.portfolio-item .frame:hover,
+.portfolio-item:focus{
     background: orange;
     -moz-transition:
         background .2s .1s;
@@ -250,7 +251,7 @@ header button:focus{
     transition:
         background .2s .1s;
 }
-.portfolio-section button:after{
+.portfolio-item:after{
     content: '';
     -moz-transition:
         background .2s .1s;
@@ -259,8 +260,8 @@ header button:focus{
     transition:
         background .2s .1s;
 }
-.portfolio-section button:hover:after,
-.portfolio-section button:focus:after {
+.portfolio-item:hover:after,
+.portfolio-item:focus:after {
     background: orange;
     bottom: 51px;
     content: '';
@@ -272,9 +273,7 @@ header button:focus{
     width: 10px;
 }
 .portfolio-section .frame {
-    background: inherit;
-    padding: 7px;
-    
+    padding: 7px; 
 }
 .portfolio-section .frame + p{
     background: #333;
@@ -282,7 +281,8 @@ header button:focus{
     padding: 15px;
 }
 .portfolio-section .frame:hover {
-    background: inherit;
+    background: orange;
+    
 }
 .portfolio-section .frame .content{
     overflow: hidden;
