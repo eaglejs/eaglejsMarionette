@@ -244,21 +244,13 @@ header button:focus{
 .portfolio-item .frame:hover,
 .portfolio-item:focus{
     background: orange;
-    -moz-transition:
-        background .2s .1s;
-    -webkit-transition:
-        background .2s .1s;
-    transition:
-        background .2s .1s;
+    -moz-transition: background .2s ease-in;
+    -webkit-transition: background .2s ease-in;
+    transition: background .2s ease-in;
 }
 .portfolio-item:after{
     content: '';
-    -moz-transition:
-        background .2s .1s;
-    -webkit-transition:
-        background .2s .1s;
-    transition:
-        background .2s .1s;
+    opacity: 0;
 }
 .portfolio-item:hover:after,
 .portfolio-item:focus:after {
@@ -270,6 +262,10 @@ header button:focus{
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
+    -moz-transition: opacity .2s ease-in;
+    -webkit-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in;
+    opacity: 1;
     width: 10px;
 }
 .portfolio-section .frame {
