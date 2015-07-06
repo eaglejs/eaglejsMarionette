@@ -59,7 +59,7 @@ p{
 #main-content{
     margin: 0 auto;
     padding-top: 60px;
-    width: 65%;
+    width: 80%;
 }
 /* HEADER */
 header {
@@ -391,17 +391,30 @@ header button:focus{
     }
 }
 @media (min-width: 56.25rem){ /* 900px */
+    .nav-container {
+        left: -20%;
+        width: 20%;
+    }
+    .nav-open header, .nav-open .site-section {
+        transform: translateX(20%);
+        transform: translate3d(20%, 0, 0);
+        -webkit-transform: translateX(20%);
+        -webkit-transform: translate3d(20%, 0, 0);
+    }
+    .overlay{
+        width: 80%
+    }
     .modal-dialog{
         width: 900px;
     }
 }
-@media (max-width: 64rem){ /* 1024px */
+@media (max-width: 64rem){ /* < 1024px */
     #main-content{
         width: 85%;
     }
 }
-@media (min-width: 100rem){ /* 1600px */
+@media (min-width: 64rem){ /* > 1024px */
     #main-content{
-        width: 70%;
+        width: 900px;
     }
 }
