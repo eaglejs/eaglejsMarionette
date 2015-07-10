@@ -294,7 +294,7 @@ header button:focus{
 }
 .social-coding a{
     background: #555; /*#A5A5A5;*/
-    border-radius: 50%;
+    border-radius: 20%;
     color: #FFF;
     display: block;
     margin: 10px auto;
@@ -317,7 +317,7 @@ header button:focus{
 }
 .codewars {
     fill: #FFF;
-    height: 98px;
+    height: 93px;
     width: 98px;
 }
 .social-coding a:hover .codewars,
