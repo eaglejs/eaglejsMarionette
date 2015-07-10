@@ -315,6 +315,18 @@ header button:focus{
         background .2s .1s,
         color .2s .1s;
 }
+.codewars {
+    fill: #FFF;
+    height: 98px;
+    width: 98px;
+}
+.social-coding a:hover .codewars,
+.social-coding a:focus .codewars {
+    fill: #333;
+    -moz-transition: fill .2s .1s;
+    -webkit-transition: fill .2s .1s;
+    transition: fill .2s .1s;
+}
 .font-icons{
     font-size: 7em;
     color: inherit;
