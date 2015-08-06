@@ -7,6 +7,7 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'text!../html/portfol
             template : _.template(template),
             onShow: function () {
             	this.showMenu(true);
+                $('#menu').focus();
             },
             onDestroy: function () {
             	this.showMenu(false);
