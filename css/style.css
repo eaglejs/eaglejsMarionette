@@ -370,6 +370,12 @@ header button:focus{
     color: #000;
 }
 
+/* overwrites */
+.img-responsive {
+    max-width: inherit;
+    width: 100%;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 30.69rem){ /* 491px */
     .nav-container {
