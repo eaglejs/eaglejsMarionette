@@ -1,6 +1,7 @@
-define(['backbone', 'marionette', 'jquery', 'underscore', 'text!../html/navMenu.html'], 
-	function(Backbone, Marionette, $, _, template){
+define(function(require){
 		'use strict';
+		var App = require('app');
+		var template = require('text!../../html/navMenu.html');
 		return Backbone.Marionette.ItemView.extend({
 			tagName: 'ul',
 			template: _.template(template),

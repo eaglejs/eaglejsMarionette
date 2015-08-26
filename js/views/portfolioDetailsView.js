@@ -1,6 +1,7 @@
-define([ 'backbone', 'marionette', 'jquery', 'underscore', 'text!../html/portfolioDetails.html' ],
-    function (Backbone, Marionette, $, _, template) {
+define(function (require) {
         'use strict';
+        var App = require('app');
+        var template = require('text!../../html/portfolioDetails.html');
         return Backbone.Marionette.ItemView.extend({
         	tagName: 'section',
         	className: 'portfolio-details container-fluid',

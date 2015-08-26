@@ -1,6 +1,7 @@
-define([ 'backbone', 'marionette', 'jquery', 'underscore', 'vent', 'text!../html/header.html' ],
-    function (Backbone, Marionette, $, _, vent, template) {
+define(function (require) {
         'use strict';
+        var App = require('app');
+        var template = require('text!../../html/header.html');
         return Backbone.Marionette.ItemView.extend({
             template : _.template(template),
             events: {
@@ -13,9 +14,9 @@ define([ 'backbone', 'marionette', 'jquery', 'underscore', 'vent', 'text!../html
                     $overlay: $('.overlay')
                 }
                 if ($('#menu.fa-arrow-left').length) {
-                    vent.trigger('portfolio');
+                    App.vent.trigger('portfolio');
                 } else {
-                    vent.trigger('show:nav:menu', elements);
+                    App.vent.trigger('show:nav:menu', elements);
                 }
             }
         });

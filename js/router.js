@@ -1,11 +1,9 @@
-define([
-	'backbone',
-	'marionette'
-], 
-	function(Backbone, Marionette){
+define(function(require){
 		'use strict';
-
-		var MyRouter = Backbone.Marionette.AppRouter.extend({
+		var App = require('app');
+		var BaseController = require('controllers/baseController');
+		return Backbone.Marionette.AppRouter.extend({
+			controller: new BaseController(),
 			appRoutes: {
 				'': 'home',
 				'portfolio': 'portfolio',
@@ -13,6 +11,5 @@ define([
 				'*actions': 'home'
 			}
 		});
-		return MyRouter;
 	}
 )

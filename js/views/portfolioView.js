@@ -1,6 +1,7 @@
-define([ 'backbone', 'marionette', 'vent', 'jquery', 'underscore', 'text!../html/portfolioItem.html' ],
-    function (Backbone, Marionette, vent, $, _, template) {
+define(function (require) {
         'use strict';
+        var App = require('app');
+        var template = require('text!../../html/portfolioItem.html');
         return Backbone.Marionette.ItemView.extend({
         	className: 'col-xs-3',
             template : _.template(template),
@@ -9,7 +10,7 @@ define([ 'backbone', 'marionette', 'vent', 'jquery', 'underscore', 'text!../html
             },
             showPortfolioItem: function(){
                 this.onBeforeDestroy = "";
-            	vent.trigger('show:portfolioDetails', this.model);
+            	App.vent.trigger('show:portfolioDetails', this.model);
             }
 
         });

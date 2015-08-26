@@ -1,10 +1,7 @@
-define([
-    "backbone",
-    "PortfolioModel"
-],
-    function (Backbone, portfolioModel) {
+define(function (require) {
         'use strict';
-
+        var App = require('app');
+        var portfolioModel = require('models/portfolioModel');
         return Backbone.Collection.extend({
             model: portfolioModel,
             url: "data/portfolioData.json",

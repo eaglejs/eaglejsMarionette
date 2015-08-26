@@ -1,14 +1,18 @@
 define(
-	['backbone', 'marionette', 'PortfolioView', 'text!../html/portfolioLayout.html'],
-	function(Backbone, Marionette, portfolioView, template){
+	function(require){
 		'use strict';
+		var App = require('app');
+		var portfolioView = require('views/portfolioView');
+		var portfolioCollection = require('collections/portfolioCollection');
+		var template = require('text!../../html/portfolioLayout.html');
+		
 		return Backbone.Marionette.CompositeView.extend({
 			template: _.template(template),
 			className: 'portfolio',
 			childViewContainer: '.row',
 			childView: portfolioView,
 			initialize: function(){
-				portfolioView.collection = this.collection;
+				this.collection = new portfolioCollection();
 			}
 		});
 	}
