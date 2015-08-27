@@ -12,6 +12,26 @@ body {
 ol, ul {
     list-style: none;
 }
+blockquote:before {
+    content: '\f10d';
+    color: #FFF;
+    font-family: "FontAwesome";
+    font-size: 1em;
+    left: 15px;
+    position: absolute;
+}
+blockquote {
+    border: none;
+    font-size: 1em;
+}
+blockquote:after {
+    content: '\f10e';
+    color: #FFF;
+    font-family: "FontAwesome";
+    font-size: 1em;
+    position: absolute;
+    right: 15px;
+}
 table {
     border-collapse: collapse;
     border-spacing: 0;
