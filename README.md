@@ -3,7 +3,7 @@ eaglejs - Marionette Version
 
 Converting my website from Backbone to Marionette as a learning experience.
 
-Created by Joshua Eagle
+Created by Joshua Eagle (joshuaseagle@gmail.com) : www.eagle-js.com
 
 (Github) https://github.com/eaglejs
 (Codewars) http://www.codewars.com/users/eaglejs
