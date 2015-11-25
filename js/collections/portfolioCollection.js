@@ -9,7 +9,7 @@ define(function (require) {
                 return response.portfolioList;
             },
             initialize: function(){
-                this.fetch({async: false});
+                this.fetch();
             },
             findById: function(id){
                 return this.find(function(model){
