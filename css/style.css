@@ -307,6 +307,12 @@ header button:focus{
 .portfolio-details {
     overflow-y: auto;
 }
+.portfolio-details .image {
+    background: #555;
+    margin: 0 10px 10px 10px;
+    max-width: 280px;
+    padding: 7px;
+}
 
 /* SOCIAL-CODING */
 .social-coding-items{
