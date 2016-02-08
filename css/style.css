@@ -311,6 +311,7 @@ header button:focus{
     background: #555;
     margin: 0 10px 10px 10px;
     max-width: 280px;
+    overflow: hidden;
     padding: 7px;
 }
 
