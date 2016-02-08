@@ -454,7 +454,7 @@ header button:focus{
     .portfolio-details .image {
         background: #555;
         margin: 0 10px 10px 10px;
-        max-width: 480px;
+        max-width: 450px;
         padding: 7px;
     }
 }
