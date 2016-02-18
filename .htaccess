@@ -18,8 +18,8 @@
     RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest [NC,OR]
     RewriteCond %{QUERY_STRING} _escaped_fragment_
 
-    # Proxy the request (previously http://www.eagle-js.com:3000/)
-    RewriteRule ^(.*)$ http://service.prerender.io/http://%{HTTP_HOST}$1 [P,L]
+    # Proxy the request
+    RewriteRule ^(.*)$ http://www.eagle-js.com:3000/http://%{HTTP_HOST}$1 [P,L]
 
   # If non existent
     # Accept everything on index.html
