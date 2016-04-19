@@ -4,7 +4,7 @@ define(function (require) {
     var template = require('text!../../html/devAchievementItem.html');
     
     return Backbone.Marionette.ItemView.extend({
-        className: 'col-xs-3',
+        className: 'col-xs-4',
         template: _.template(template)
     });
 });
