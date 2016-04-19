@@ -29,6 +29,9 @@ define(function (require) {
 		App.vent.on('social-coding', function () {
 			that.socialCoding();
 		});
+		App.vent.on('achievements', function () {
+			that.achievements();
+		});
 		App.vent.on('show:nav:menu', function(elements){
 			that.showNavMenu(elements);
 		});
@@ -53,6 +56,11 @@ define(function (require) {
 		var SocialCodingView = require('views/socialCodingView');
 		App.views.socialCoding = new SocialCodingView();
 		App.views.layout.mainContentRegion.show(App.views.socialCoding);	
+	},
+	achievements: function () {
+		var DevAchievementsCompositeView = require("views/devAchievementsCompositeView");
+		App.views.devAchievementsComposite = new DevAchievementsCompositeView();
+		App.views.layout.mainContentRegion.show(App.views.devAchievementsComposite);
 	},
 	showNavMenu: function (elements) {
 		var NavMenuView = require('views/navMenuView');

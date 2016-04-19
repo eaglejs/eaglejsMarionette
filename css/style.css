@@ -17,8 +17,6 @@ blockquote:before {
     color: #FFF;
     font-family: "FontAwesome";
     font-size: 1em;
-    left: 15px;
-    position: absolute;
 }
 blockquote {
     border: none;
@@ -29,8 +27,6 @@ blockquote:after {
     color: #FFF;
     font-family: "FontAwesome";
     font-size: 1em;
-    position: absolute;
-    right: 15px;
 }
 table {
     border-collapse: collapse;
@@ -41,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 h2 {
     font-size: 1.8rem;
@@ -70,7 +66,6 @@ section{
 }
 p{
     color: #FFF;
-    line-height: 1.2em;
     margin-bottom: 20px;
 }
 .site-container {
@@ -96,7 +91,7 @@ header {
     -webkit-transform: translateX(25%);
     -webkit-transform: translate3d(25%, 0, 0);
 }
-header button {
+#menu {
     background: #333;
     border: none;
     color: #FFF;
@@ -107,8 +102,8 @@ header button {
     width: 50px;
     height: 50px;
 }
-header button:hover,
-header button:focus{
+#menu:hover,
+#menu:focus{
     color: #333;
     background: orange;
     -moz-transition:
@@ -150,17 +145,20 @@ header button:focus{
     color: orange;
     margin-right: 10px;
 }
+.nav-container li a:before {
+    font-family: 'FontAwesome';
+}
 .nav-container .house:before {
     content: '\f015';
-    font-family: 'FontAwesome';
 }
 .nav-container .briefcase:before {
     content: '\f0b1';
-    font-family: 'FontAwesome';
 }
 .nav-container .code:before {
     content: '\f121';
-    font-family: 'FontAwesome';
+}
+.nav-container .trophy:before {
+    content: '\f091';
 }
 .nav-container a {
     border-bottom: 5px solid #555;
@@ -314,6 +312,14 @@ header button:focus{
     overflow: hidden;
     padding: 7px;
 }
+.portfolio-details blockquote:before {
+    left: 15px;
+    position: absolute;
+}
+.portfolio-details blockquote:after {
+    right: 15px;
+    position: absolute;
+}
 
 /* SOCIAL-CODING */
 .social-coding-items{
@@ -358,9 +364,22 @@ header button:focus{
     font-size: 7em;
     color: inherit;
 }
+
+/* Achievements */
+.dev-achievements blockquote {
+    color: #FFF;
+    font-size: 2.1rem;
+    text-align: center;
+}
+.dev-achievements .col-xs-3 {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
 /* CSS that spans across multiple pages */
 .home, .portfolio, .social-coding,
- .font-icons, .portfolio-details {
+ .font-icons, .portfolio-details, .dev-achievements {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
     animation: fadein 1s;
@@ -388,13 +407,6 @@ header button:focus{
 /* FOOTER */
 .copyright{
     color: #555;
-}
-
-/* MODAL */
-.modal h1,
-.modal h1 a,
-.modal p {
-    color: #000;
 }
 
 /* overwrites */

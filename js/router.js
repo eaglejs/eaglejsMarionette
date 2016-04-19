@@ -8,6 +8,7 @@ define(function(require){
 				'': 'home',
 				'portfolio': 'portfolio',
 				'social-coding': 'socialCoding',
+				'achievements': 'achievements',
 				'*actions': 'home'
 			}
 		});
