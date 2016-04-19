@@ -57,6 +57,10 @@ h6 {
 section{
     margin-bottom: 10px;
 }
+a {
+    color: orange;
+}
+
 .clearfix:after {
     content: ".";
     visibility: hidden;
