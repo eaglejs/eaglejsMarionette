@@ -1,10 +1,28 @@
 define(function (require) {
         'use strict';
-        
+        var metadata = require('collections/metadata');
         var template = require('text!../../html/home.html');
         return Backbone.Marionette.ItemView.extend({
             template : _.template(template),
-            className: 'home'
+            collection: new metadata(),
+            className: 'home',
+            initialize: function () {
+                this.collection.bind("sync", this.render, this);
+            },
+            onShow: function () {            
+                if (this.collection.length > 0)    
+                    this.renderMetadata(this.collection.get("home").toJSON());
+            },
+            renderMetadata: function (metadata) {
+                $('meta[property="og:title"]').remove();
+                $('head').append( '<meta name="og:title" content="'+metadata.id+'">' );
+
+                $('meta[property="og:url"]').remove();
+                $('head').append( '<meta name="og:url" content="'+metadata.url+'">' );
+
+                $('meta[property="og:description"]').remove();
+                $('head').append( '<meta name="og:description" content="'+metadata.description+'">' );
+            }
         });
     }
 );

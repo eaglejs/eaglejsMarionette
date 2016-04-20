@@ -11,7 +11,6 @@ define(function (require) {
 		var that = this;
 		
 		App.views = {};
-		App.collections = {};
 		App.views.header = new Header();
 		App.views.footer = new Footer();
 		App.views.layout = new Layout();

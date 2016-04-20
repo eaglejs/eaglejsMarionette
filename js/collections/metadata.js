@@ -1,7 +1,7 @@
 define (function (require) {
     'use strict';
     
-    var metadataModel = require("models/metadata.js");
+    var metadataModel = require("models/metadata");
     
     return Backbone.Collection.extend ({
         model: metadataModel,
