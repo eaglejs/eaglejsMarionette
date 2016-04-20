@@ -18,7 +18,7 @@ define(['jquery', 'underscore', 'backbone', 'marionette', 'bootstrap'], function
 			event.preventDefault();
 	
 		//Remove leading slashes and hash bangs (backward compatablility)
-		var url = href.replace(/^\//,'').replace('\#\!\/','');
+		var url = href.replace('\#\!\/','');
 	
 		//Instruct Backbone to trigger routing events
 		Backbone.history.navigate(url, {trigger: true});
