@@ -21,8 +21,8 @@ define(['jquery', 'underscore', 'backbone', 'marionette', 'bootstrap'], function
 		var url = href.replace(/^\//,'').replace('\#\!\/','');
 	
 		//Instruct Backbone to trigger routing events
-		Backbone.history.navigate(url);
-		App.vent.trigger(url);
+		Backbone.history.navigate(url, {trigger: true});
+		//App.vent.trigger(url);
 	
 		return false;
 	});
