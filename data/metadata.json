@@ -1,0 +1,24 @@
+{
+    metadata:[
+        {
+            "title": "home",
+            "url": "http://www.eagle-js.com/",
+            "description": "Joshua Eagle is an experienced Web Developer using Backbone.js/Marionette.js, and Angular.js as his frameworks to create single-page, seamless and responsive/adaptive websites."
+        },
+        {
+            "title": "portfolio",
+            "url": "http://www.eagle-js.com/portfolio",
+            "description": "The following pages I have been personally involved in developing, ranging from design, development with Drupal, Wordpress, ASP.net, MV*, to managing devops using Docker, and Jenkins."
+        },
+        {
+            "title": "social-coding",
+            "url": "http://www.eagle-js.com/",
+            "description": "Joshua Eagle enjoys getting involved in the social coding scene. Whether it is contributing to the community in Github, attending conferences, or playing around with code challengs."
+        },
+        {
+            "title": "achievements",
+            "url": "http://www.eagle-js.com/",
+            "description": "Joshua Eagle is very active in learning the latest and greatest technologies. Teamtreehouse is one of the sites that he uses to learn all of the best practices for professional web applications."
+        }
+    ]
+}

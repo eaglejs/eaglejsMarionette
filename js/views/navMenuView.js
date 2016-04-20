@@ -1,6 +1,6 @@
 define(function(require){
 		'use strict';
-		var App = require('app');
+		
 		var template = require('text!../../html/navMenu.html');
 		return Backbone.Marionette.ItemView.extend({
 			tagName: 'ul',

@@ -1,7 +1,7 @@
 define(
 	function(require){
 		'use strict';
-		var App = require('app');
+		
 		var portfolioView = require('views/portfolioView');
 		var portfolioCollection = require('collections/portfolioCollection');
 		var template = require('text!../../html/portfolioLayout.html');

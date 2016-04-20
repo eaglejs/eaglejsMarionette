@@ -1,6 +1,6 @@
 define (function (require) {
     'use stritc';
-    var App = require('app');
+    
     var devAchievement = require("models/devAchievement");
     
     return Backbone.Collection.extend({
