@@ -2,6 +2,7 @@ define(function (require) {
   'use strict';
   var App = require('app');
   var Header = require('views/headerView');
+  var NavMenuView = require('views/navMenuView');
   var Footer = require('views/footerView');
   var Layout = require('views/layout');
   
@@ -14,10 +15,11 @@ define(function (require) {
 		App.views.header = new Header();
 		App.views.footer = new Footer();
 		App.views.layout = new Layout();
-		
+		App.views.navMenu = new NavMenuView();
 		
 		App.mainRegion.show(App.views.layout);
 		App.views.layout.headerRegion.show(App.views.header);
+		App.views.layout.navMenuRegion.show(App.views.navMenu);
 		App.views.layout.footerRegion.show(App.views.footer);
 		
 		App.vent.on('home', function () {
@@ -63,15 +65,10 @@ define(function (require) {
 		App.views.layout.mainContentRegion.show(App.views.devAchievementsComposite);
 	},
 	showNavMenu: function (elements) {
-		var NavMenuView = require('views/navMenuView');
-		App.views.navMenu = new NavMenuView();
-	
-		if (elements.$navContainer.html().length){
+		if (elements.$body.hasClass('nav-open')){
 			elements.$body.removeClass('nav-open');
 			elements.$overlay.addClass('hide');
-			App.views.layout.navMenuRegion.empty();
 		} else{
-			App.views.layout.navMenuRegion.show(App.views.navMenu);
 			elements.$body.addClass('nav-open');
 			elements.$overlay.removeClass('hide');
 		}
@@ -79,7 +76,6 @@ define(function (require) {
 	hideNavMenu: function (elements) {
 		elements.$body.removeClass('nav-open');
 		elements.$overlay.addClass('hide');
-		App.views.layout.navMenuRegion.empty();
 	},
 	showPortfolioDetails: function (model) {
 		var PortfolioDetailsView = require('views/portfolioDetailsView');
