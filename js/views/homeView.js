@@ -14,13 +14,13 @@ define(function (require) {
                     this.renderMetadata(this.collection.get("home").toJSON());
             },
             renderMetadata: function (metadata) {
-                $('meta[property="og:title"]').remove();
+                $('meta[name="og:title"]').remove();
                 $('head').append( '<meta name="og:title" content="'+metadata.id+'">' );
 
-                $('meta[property="og:url"]').remove();
+                $('meta[name="og:url"]').remove();
                 $('head').append( '<meta name="og:url" content="'+metadata.url+'">' );
 
-                $('meta[property="og:description"]').remove();
+                $('meta[name="og:description"]').remove();
                 $('head').append( '<meta name="og:description" content="'+metadata.description+'">' );
             }
         });
