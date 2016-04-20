@@ -14,11 +14,11 @@ define(['jquery', 'underscore', 'backbone', 'marionette', 'bootstrap'], function
 		var href = $(event.currentTarget).attr('href');
 	
 		//Allow shift+click for new tabs, etc.
-		if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey)
-			event.preventDefault();
+		// if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey)
+		// 	event.preventDefault();
 	
-		//Remove leading slashes and hash bangs (backward compatablility)
-		var url = href.replace(/^\//,'').replace('\#\!\/','');
+		// //Remove leading slashes and hash bangs (backward compatablility)
+		// var url = href.replace(/^\//,'').replace('\#\!\/','');
 	
 		//Instruct Backbone to trigger routing events
 		Backbone.history.navigate(url);
