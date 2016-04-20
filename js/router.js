@@ -9,8 +9,7 @@ define(function(require){
 				'portfolio': 'portfolio',
 				'social-coding': 'socialCoding',
 				'achievements': 'achievements',
-				'*actions': 'home',
-				'*path': 'home'
+				'*actions': 'home'
 			}
 		});
 	}
