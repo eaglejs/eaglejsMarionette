@@ -5,7 +5,7 @@ define(function(require){
 		return Backbone.Marionette.AppRouter.extend({
 			controller: new BaseController(),
 			appRoutes: {
-				'': 'home',
+				'/': 'home',
 				'portfolio': 'portfolio',
 				'social-coding': 'socialCoding',
 				'achievements': 'achievements',
