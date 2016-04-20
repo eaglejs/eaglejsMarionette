@@ -65,13 +65,9 @@ define(function (require) {
 		App.views.layout.mainContentRegion.show(App.views.devAchievementsComposite);
 	},
 	showNavMenu: function (elements) {
-		if (elements.$body.hasClass('nav-open')){
-			elements.$body.removeClass('nav-open');
-			elements.$overlay.addClass('hide');
-		} else{
-			elements.$body.addClass('nav-open');
-			elements.$overlay.removeClass('hide');
-		}
+		App.views.navMenu.render();
+		elements.$body.addClass('nav-open');
+		elements.$overlay.removeClass('hide');
 	},
 	hideNavMenu: function (elements) {
 		elements.$body.removeClass('nav-open');
