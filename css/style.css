@@ -370,12 +370,12 @@ header {
 }
 
 /* Achievements */
-.dev-achievements blockquote {
+.achievements blockquote {
     color: #FFF;
     font-size: 2.1rem;
     text-align: center;
 }
-.dev-achievements .col-xs-4 {
+.achievements .col-xs-4 {
     float: none;
     display: inline-block;
     vertical-align: top;
@@ -383,7 +383,7 @@ header {
 
 /* CSS that spans across multiple pages */
 .home, .portfolio, .social-coding,
- .font-icons, .portfolio-details, .dev-achievements {
+ .font-icons, .portfolio-details, .achievements {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
     animation: fadein 1s;

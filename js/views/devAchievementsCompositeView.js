@@ -7,7 +7,7 @@ define (function (require) {
     
     return Backbone.Marionette.CompositeView.extend({
         template: _.template(template),
-        className: "dev-achievements",
+        className: "achievements",
         childViewContainer: '.row',
         childView: devAchievementView,
         initialize: function () {

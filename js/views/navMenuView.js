@@ -10,15 +10,17 @@ define(function(require){
 			},
 			onRender: function(){
 				var $currentPage = $('#main-content > div'),
-					navMenuBtns = this.el.querySelectorAll('a');
-
-					if ($currentPage.hasClass('home')){
-						navMenuBtns[0].classList.add('selected');
-					} else if ($currentPage.hasClass("portfolio")){
-						navMenuBtns[1].classList.add('selected');
-					} else if ($currentPage.hasClass("social-coding")){
-						navMenuBtns[2].classList.add('selected');
-					}
+					$navMenuBtns = this.$el.find('a');
+					
+					$navMenuBtns.closest('.' + $currentPage.attr("class") + "-btn").addClass("selected");
+					
+					// if ($currentPage.hasClass('home')){
+					// 	navMenuBtns[0].classList.add('selected');
+					// } else if ($currentPage.hasClass("portfolio")){
+					// 	navMenuBtns[1].classList.add('selected');
+					// } else if ($currentPage.hasClass("social-coding")){
+					// 	navMenuBtns[2].classList.add('selected');
+					// }
 			},
 			handleSelected: function(e){
 				
