@@ -15,7 +15,7 @@
   # Handle Prerender.io
     RequestHeader set X-Prerender-Token "GdmOibTt9puoDXjgFwa4"
 
-    RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|facebot|duckduckbot|bingbot|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} baiduspider|duckduckbot|bingbot|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest [NC,OR]
     RewriteCond %{QUERY_STRING} _escaped_fragment_
 
     # Proxy the request (previously http://www.eagle-js.com:3000/)
