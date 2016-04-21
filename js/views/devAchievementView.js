@@ -17,13 +17,13 @@ define(function (require) {
         },
         renderMetadata: function (metadata) {
             $('meta[name="og:title"]').remove();
-            $('head').append( '<meta name="og:title" content="'+metadata.id+'">' );
+            $('head').append( '<meta name="og:title" content="'+metadata.id+'" />' );
 
             $('meta[name="og:url"]').remove();
-            $('head').append( '<meta name="og:url" content="'+metadata.url+'">' );
+            $('head').append( '<meta name="og:url" content="'+metadata.url+'" />' );
 
-            $('meta[name="og:description"]').remove();
-            $('head').append( '<meta name="og:description" content="'+metadata.description+'">' );
+            $('meta[name="og:description"], meta[name="description"]').remove();
+            $('head').append( '<meta name="og:description" content="'+metadata.description+'" /><meta name="description" content="'+metadata.description+'" />' );
         }
     });
 });

@@ -24,8 +24,8 @@ define(function (require) {
                 $('meta[name="og:url"]').remove();
                 $('head').append( '<meta name="og:url" content="'+metadata.url+'">' );
 
-                $('meta[name="og:description"]').remove();
-                $('head').append( '<meta name="og:description" content="'+metadata.description+'">' );
+                $('meta[name="og:description"], meta[name="description"]').remove();
+                $('head').append( '<meta name="og:description" content="'+metadata.description+'" /><meta name="description" content="'+metadata.description+'" />' );
             },
             showPortfolioItem: function(){
                 this.onBeforeDestroy = "";
