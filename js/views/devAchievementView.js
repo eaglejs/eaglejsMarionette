@@ -8,9 +8,6 @@ define(function (require) {
         className: 'col-xs-4 col-sm-3',
         template: _.template(template),
         collection: new metadata(),
-        intialize: function (){
-            this.collection.bind("sync", this.render, this);
-        },
         onShow: function () {            
             if (this.collection.length > 0)    
                 this.renderMetadata(this.collection.get("achievements").toJSON());
