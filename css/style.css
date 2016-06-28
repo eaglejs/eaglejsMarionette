@@ -277,7 +277,7 @@ header {
 .portfolio-item:hover:after,
 .portfolio-item:focus:after {
     background: orange;
-    bottom: 51px;
+    bottom: 55px;
     content: '';
     height: 10px;
     position: absolute;
