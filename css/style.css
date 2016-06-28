@@ -266,10 +266,10 @@ header {
 .portfolio-item .frame:hover,
 .portfolio-item:focus{
     background: orange;
-    -moz-transition: background .2s ease-in;
-    -webkit-transition: background .2s ease-in;
-    transition: background .2s ease-in;
-    z-index: 1;
+    -moz-transition: background .3s ease-in;
+    -webkit-transition: background .3s ease-in;
+    transition: background .3s ease-in;
+    z-index: 0;
 }
 .portfolio-item:after{
     content: '';
@@ -285,12 +285,11 @@ header {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
-    -moz-transition: opacity .3s ease-in;
-    -webkit-transition: opacity .3s ease-in;
-    transition: opacity .3s ease-in;
+    -moz-transition: opacity .2s ease-in;
+    -webkit-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in;
     opacity: 1;
     width: 10px;
-    z-index: 0;
 }
 .portfolio-section .frame {
     padding: 7px; 
