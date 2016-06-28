@@ -1,29 +1,4 @@
-  RewriteEngine On
-# If requested resource exists as a file or directory
-  # (REQUEST_FILENAME is only relative in virtualhost context, so not usable)
-    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
-    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
-    # Go to it as is
-    RewriteRule ^ - [L]
 
-  # If non existent
-    # If path ends with / and is not just a single /, redirect to without the trailing /
-      RewriteCond %{REQUEST_URI} ^.*/$
-      RewriteCond %{REQUEST_URI} !^/$
-      RewriteRule ^(.*)/$ $1 [R,QSA,L]      
-
-  # Handle Prerender.io
-    RequestHeader set X-Prerender-Token "GdmOibTt9puoDXjgFwa4"
-
-    RewriteCond %{HTTP_USER_AGENT} baiduspider|duckduckbot|bingbot|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest [NC,OR]
-    RewriteCond %{QUERY_STRING} _escaped_fragment_
-
-    # Proxy the request (previously http://www.eagle-js.com:3000/)
-    RewriteRule ^(.*)$ http://service.prerender.io/http://%{HTTP_HOST}$1 [P,L]
-
-  # If non existent
-    # Accept everything on index.html
-    RewriteRule ^ /index.html
 
   # handle gzip for my site.
     <ifModule mod_gzip.c>
