@@ -266,10 +266,9 @@ header {
 .portfolio-item .frame:hover,
 .portfolio-item:focus{
     background: orange;
-    -moz-transition: background .3s ease-in;
-    -webkit-transition: background .3s ease-in;
-    transition: background .3s ease-in;
-    z-index: 0;
+    -moz-transition: background .2s ease-in;
+    -webkit-transition: background .2s ease-in;
+    transition: background .2s ease-in;
 }
 .portfolio-item:after{
     content: '';
