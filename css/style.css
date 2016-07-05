@@ -276,19 +276,23 @@ header {
 }
 .portfolio-item:hover:after,
 .portfolio-item:focus:after {
-    background: orange;
-    bottom: 55px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid orange;
+    bottom: 50px;
     content: '';
-    height: 10px;
+    display: block;
+    height: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
+    right: 0;
     -moz-transition: opacity .2s ease-in;
     -webkit-transition: opacity .2s ease-in;
     transition: opacity .2s ease-in;
     opacity: 1;
-    width: 10px;
+    width: 0;
 }
 .portfolio-section .frame {
     padding: 7px; 
