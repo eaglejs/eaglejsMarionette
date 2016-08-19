@@ -27,7 +27,10 @@ gulp.task('default', ['clean', 'sass'], function () {
     ], {base: './'})
         .pipe(gulp.dest('./dist/'));
 
-    gulp.src('./bower_components/backbone/backbone-min.js')
+    gulp.src([
+            './bower_components/backbone/backbone-min.js',
+            './bower_components/backbone/backbone-min.map'
+        ])
         .pipe(gulp.dest('./dist/js/libs/backbone'));
 
     gulp.src('./bower_components/backbone.marionette/lib/backbone.marionette.min.js')
