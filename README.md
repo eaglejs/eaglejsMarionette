@@ -7,7 +7,7 @@
 `npm install gulp-cli bower -g`
 
 ### Run the following commands from the root of the application: 
-```npm install```
+`npm install`
 
 ```bower install```
 
