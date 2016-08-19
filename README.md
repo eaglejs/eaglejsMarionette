@@ -7,9 +7,8 @@
 `npm install gulp-cli bower -g`
 
 ### Run the following commands from the root of the application: 
-```npm install```
-
-```bower install```
+`npm install`
+`bower install`
 
 ### The dist folder is where all of the application files exist, and you should link your apache, or any server you choose to it.
 
