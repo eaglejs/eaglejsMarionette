@@ -33,7 +33,10 @@ gulp.task('default', ['clean', 'sass'], function () {
         ])
         .pipe(gulp.dest('./dist/js/libs/backbone'));
 
-    gulp.src('./bower_components/backbone.marionette/lib/backbone.marionette.min.js')
+    gulp.src([
+            './bower_components/backbone.marionette/lib/backbone.marionette.min.js',
+            './bower_components/backbone.marionette/lib/backbone.marionette.min.js.map'
+        ])
         .pipe(gulp.dest('./dist/js/libs/backbone.marionette'));
 
     gulp.src('./bower_components/bootstrap/dist/css/*')
@@ -54,7 +57,10 @@ gulp.task('default', ['clean', 'sass'], function () {
     gulp.src('./bower_components/requirejs/require.js')
         .pipe(gulp.dest('./dist/js/libs/requirejs'));
 
-    gulp.src('./bower_components/underscore/underscore-min.js')
+    gulp.src([
+            './bower_components/underscore/underscore-min.js',
+            './bower_components/underscore/underscore-min.map'
+        ])
         .pipe(gulp.dest('./dist/js/libs/underscore'));
 });
 
