@@ -5,7 +5,7 @@ define(function (require) {
         return Backbone.Marionette.ItemView.extend({
         	tagName: "p",
             className: "copyright text-center",
-            template : _.template(template),
+			template : _.template(template)
         });
     }
 );
