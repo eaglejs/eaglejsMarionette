@@ -1,4 +1,6 @@
   RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # If requested resource exists as a file or directory
   # (REQUEST_FILENAME is only relative in virtualhost context, so not usable)
     RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
